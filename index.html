@@ -182,10 +182,17 @@
         }
 
         @media (max-width: 850px) {
+            body {
+                height: auto;
+                min-height: 100vh;
+                overflow-y: auto;
+                justify-content: flex-start;
+                padding: 10px 10px 30px 10px;
+            }
             .container {
                 grid-template-columns: 1fr;
                 gap: 15px;
-                padding: 0 10px;
+                padding: 0;
             }
             .panel-left, .panel-right {
                 max-width: 100%;
