@@ -748,6 +748,8 @@
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(255, 71, 87, 0.2);
             transition: all 0.3s;
+            display: inline-flex;
+            margin: 0 auto;
         }
 
         .modal-close:hover {
@@ -933,7 +935,7 @@
     </div>
 
     <!-- Celebration Modal -->
-    <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-overlay" id="modalOverlay" onclick="if(event.target === this) closeModal()">
         <div class="modal">
             <div class="modal-ribbon">🎉 Kết Quả Quay Số 🎉</div>
             <div class="winner-title">
