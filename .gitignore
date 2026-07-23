@@ -1,0 +1,6 @@
+# Thư mục hệ thống macOS
+.DS_Store
+**/.DS_Store
+
+# File cấu hình riêng tư chứa URL Google Sheets
+config.js

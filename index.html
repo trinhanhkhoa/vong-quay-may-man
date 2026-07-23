@@ -942,6 +942,7 @@
 
     <canvas id="confetti"></canvas>
 
+    <script src="config.js"></script>
     <script>
         // Keyboard Shortcuts (Space for Spin, R for Sync)
         window.addEventListener('keydown', (e) => {
@@ -1001,6 +1002,8 @@
         const savedSheetUrl = localStorage.getItem('lottery_sheet_url');
         if (savedSheetUrl) {
             sheetUrlInput.value = savedSheetUrl;
+        } else if (typeof CONFIG !== 'undefined' && CONFIG.GOOGLE_SHEET_URL) {
+            sheetUrlInput.value = CONFIG.GOOGLE_SHEET_URL;
         } else {
             sheetUrlInput.value = "https://docs.google.com/spreadsheets/d/1Z8P9F3b_67Wz_oGg06q9XpTchfE92BfK7pWswmQJpA8/edit?usp=sharing";
         }
