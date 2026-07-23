@@ -189,13 +189,27 @@
                 justify-content: flex-start;
                 padding: 10px 10px 30px 10px;
             }
+
             .container {
                 grid-template-columns: 1fr;
                 gap: 15px;
                 padding: 0;
             }
-            .panel-left, .panel-right {
+
+            .panel-left,
+            .panel-right {
                 max-width: 100%;
+            }
+
+            .settings-toggle-btn {
+                padding: 10px;
+                border-radius: 50%;
+                aspect-ratio: 1;
+                gap: 0;
+            }
+
+            .settings-toggle-btn span {
+                display: none;
             }
         }
 
@@ -792,47 +806,48 @@
                 height: 140px;
                 width: 140px;
             }
+
             .banner-header h1 {
                 font-size: 1.1rem;
             }
+
             .tambinh-title {
                 font-size: 1.4rem;
             }
+
             .main-title {
                 font-size: 1.9rem;
             }
+
             .slogan {
                 font-size: 0.8rem;
             }
+
             .panel {
                 padding: 15px 15px;
                 border-radius: 16px;
             }
+
             .panel-title {
                 font-size: 1.25rem;
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 5px;
             }
+
             .winners-list-title {
                 font-size: 1.25rem;
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 8px;
             }
+
             .winner-badge {
                 padding: 8px 10px;
                 font-size: 0.85rem;
             }
-            .settings-toggle-btn {
-                padding: 10px;
-                border-radius: 50%;
-                aspect-ratio: 1;
-                gap: 0;
-            }
-            .settings-toggle-btn span {
-                display: none;
-            }
+
+
         }
 
         /* Responsive modal styling for small screens */
@@ -842,12 +857,15 @@
                 border-radius: 20px;
                 width: 90%;
             }
+
             .winner-title {
                 font-size: 1.4rem;
             }
+
             .winner-phone {
                 font-size: 1.1rem;
             }
+
             .modal-ribbon {
                 padding: 6px 15px;
                 font-size: 0.85rem;
