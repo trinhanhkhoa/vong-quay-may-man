@@ -84,76 +84,72 @@
             }
         }
 
-        /* Banner Header Section with Logos */
+        /* Banner Header Section with Logos (Horizontal Layout for LED screens) */
         .banner-header {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 8px;
-            width: 100%;
-            max-width: 950px;
-            z-index: 10;
-        }
-
-        .logo-container {
-            display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
             gap: 40px;
-            margin-bottom: 8px;
+            margin-bottom: 25px;
+            width: 100%;
+            max-width: 1400px;
+            z-index: 10;
+        }
+
+        .banner-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
         }
 
         .logo-tambinh {
-            height: 250px;
-            width: 250px;
+            height: 180px;
+            width: 180px;
             object-fit: cover;
             clip-path: circle(49%);
-            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
             transition: transform 0.3s ease;
         }
 
-        .logo-shtpc {
-            height: 90px;
-            object-fit: contain;
-            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.05));
-            transition: transform 0.3s ease;
-        }
-
-        .logo-tambinh:hover,
-        .logo-shtpc:hover {
+        .logo-tambinh:hover {
             transform: scale(1.05);
         }
 
         .banner-header h1 {
-            font-size: 1.35rem;
-            font-weight: 600;
+            font-size: 1.8rem;
+            font-weight: 800;
             color: #2f3542;
             letter-spacing: -0.5px;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
             line-height: 1.2;
             text-transform: uppercase;
         }
 
         .tambinh-title {
-            font-size: 1.8rem;
-            font-weight: 700;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            margin-top: 2px;
+            margin-bottom: 6px;
             display: inline-block;
-            margin-top: 5px;
         }
 
         .slogan {
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-size: 1.15rem;
+            font-weight: 600;
             color: var(--text-muted);
             letter-spacing: 0.5px;
             display: inline-block;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         /* Compact highlight "Quay số may mắn" title */
         .main-title {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
             -webkit-background-clip: text;
@@ -175,13 +171,13 @@
             }
         }
 
-        /* Container & Layout (Grid layout with two columns) */
+        /* Container & Layout (Grid layout with two columns - wider for LED) */
         .container {
             width: 100%;
-            max-width: 1050px;
+            max-width: 1400px;
             display: grid;
             grid-template-columns: 1.4fr 0.9fr;
-            gap: 20px;
+            gap: 30px;
             align-items: stretch;
             z-index: 10;
         }
@@ -239,17 +235,17 @@
         }
 
         .panel-left {
-            max-width: 600px;
+            max-width: 880px;
         }
 
         .panel-right {
-            max-width: 420px;
+            max-width: 490px;
             align-self: stretch;
         }
 
         .panel-title {
-            font-size: 1.15rem;
-            font-weight: 600;
+            font-size: 1.5rem;
+            font-weight: 700;
             align-self: flex-start;
             margin-bottom: 8px;
             color: var(--text-main);
@@ -292,7 +288,7 @@
         }
 
         .winners-list-title {
-            font-size: 1.15rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
             text-transform: uppercase;
@@ -308,10 +304,10 @@
         .winners-badges {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
             flex-grow: 1;
             overflow-y: auto;
-            max-height: 380px;
+            max-height: 520px;
             /* Limits size and scrolls if list gets long */
             padding-right: 5px;
         }
@@ -335,9 +331,9 @@
             background: white;
             border-left: 5px solid var(--gold-dark);
             color: var(--text-main);
-            padding: 10px 14px;
+            padding: 12px 18px;
             border-radius: 10px;
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             font-weight: 600;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
             display: flex;
@@ -352,13 +348,13 @@
         .winner-index {
             background: linear-gradient(135deg, #ffd32c 0%, #ff9f1a 100%);
             color: #5d4037;
-            width: 22px;
-            height: 22px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.75rem;
+            font-size: 0.95rem;
             font-weight: 800;
         }
 
@@ -367,9 +363,9 @@
             border: none;
             color: #747d8c;
             cursor: pointer;
-            font-size: 0.78rem;
+            font-size: 1rem;
             font-weight: 600;
-            padding: 4px 8px;
+            padding: 6px 12px;
             border-radius: 6px;
             display: flex;
             align-items: center;
@@ -491,10 +487,10 @@
 
         /* Buttons and Form controls */
         button {
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 10px;
             border: none;
-            font-size: 0.95rem;
+            font-size: 1.15rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -508,8 +504,8 @@
             background: linear-gradient(135deg, var(--primary) 0%, #ff6b81 100%);
             color: white;
             box-shadow: 0 4px 15px rgba(255, 71, 87, 0.25);
-            padding: 12px 30px;
-            font-size: 1.05rem;
+            padding: 14px 35px;
+            font-size: 1.3rem;
         }
 
         .btn-primary:hover {
@@ -650,36 +646,36 @@
             width: 100%;
             flex-grow: 1;
             overflow-y: auto;
-            max-height: 220px;
+            max-height: 380px;
             background: rgba(0, 0, 0, 0.02);
             border-radius: 12px;
-            padding: 5px;
+            padding: 8px;
             border: 1px dashed rgba(0, 0, 0, 0.08);
-            margin-top: 8px;
+            margin-top: 10px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.8rem;
+            font-size: 1.15rem;
         }
 
         th {
             text-align: left;
-            padding: 6px 8px;
+            padding: 10px 12px;
             color: var(--text-muted);
-            font-weight: 600;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            font-weight: 700;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
         }
 
         td {
-            padding: 6px 8px;
+            padding: 10px 12px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.02);
         }
 
         .status-badge {
-            font-size: 0.75rem;
-            padding: 4px 8px;
+            font-size: 0.95rem;
+            padding: 5px 10px;
             border-radius: 20px;
             font-weight: 600;
             display: inline-block;
@@ -977,12 +973,13 @@
 
     <!-- Official Event Header Banner with Logos -->
     <div class="banner-header">
-        <div class="logo-container">
-            <img class="logo-tambinh" src="./images/logo-phuong-tam-binh.png" alt="Ủy ban Nhân dân Phường Tam Bình">
+        <img class="logo-tambinh" src="./images/logo-phuong-tam-binh.png" alt="Ủy ban Nhân dân Phường Tam Bình">
+        <div class="banner-info">
+            <h1>Ngày hội Công dân số Inno - Tech Day 2026</h1>
+            <div class="tambinh-title">phường Tam Bình</div>
+            <div class="slogan">Công nghệ kiến tạo - Bệ phóng vươn xa</div>
+            <div class="main-title">Quay số may mắn</div>
         </div>
-        <h1>Ngày hội Công dân số Inno - Tech Day 2026<br><span class="tambinh-title">phường Tam Bình</span></h1>
-        <div class="slogan">Công nghệ kiến tạo - Bệ phóng vươn xa</div>
-        <div class="main-title">Quay số may mắn</div>
     </div>
 
     <div class="container">
@@ -997,7 +994,7 @@
             </div>
 
             <div class="canvas-container">
-                <canvas id="lotteryCanvas" width="440" height="340"></canvas>
+                <canvas id="lotteryCanvas" width="560" height="420"></canvas>
             </div>
 
             <div class="controls">
@@ -1412,7 +1409,7 @@
 
         const centerX = canvas.width / 2;
         const centerY = canvas.height / 2 - 15;
-        const cageRadius = 120;
+        const cageRadius = 160;
 
         let cageAngle = 0;
         let rotationSpeed = 0;
@@ -1427,7 +1424,7 @@
                 this.y = centerY + (Math.random() - 0.5) * (cageRadius - 35);
                 this.vx = (Math.random() - 0.5) * 4;
                 this.vy = (Math.random() - 0.5) * 4;
-                this.radius = 12;
+                this.radius = 15;
                 this.color = color || `hsl(${Math.random() * 30 + 35}, 100%, 65%)`;
                 this.number = number;
             }
@@ -1496,7 +1493,7 @@
                 ctx.stroke();
 
                 ctx.fillStyle = '#4e342e';
-                ctx.font = 'bold 10px Outfit';
+                ctx.font = 'bold 12px Outfit';
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
                 ctx.fillText(this.number, this.x, this.y);
@@ -1518,18 +1515,18 @@
             ctx.fill();
 
             ctx.beginPath();
-            ctx.moveTo(centerX - 85, centerY + cageRadius + 15);
-            ctx.lineTo(centerX - 40, centerY);
-            ctx.lineTo(centerX + 40, centerY);
-            ctx.lineTo(centerX + 85, centerY + cageRadius + 15);
+            ctx.moveTo(centerX - 113, centerY + cageRadius + 20);
+            ctx.lineTo(centerX - 53, centerY);
+            ctx.lineTo(centerX + 53, centerY);
+            ctx.lineTo(centerX + 113, centerY + cageRadius + 20);
             ctx.strokeStyle = '#c5a880';
             ctx.lineWidth = 8;
             ctx.lineCap = 'round';
             ctx.stroke();
 
             ctx.beginPath();
-            ctx.moveTo(centerX - 110, centerY + cageRadius + 20);
-            ctx.lineTo(centerX + 110, centerY + cageRadius + 20);
+            ctx.moveTo(centerX - 146, centerY + cageRadius + 26);
+            ctx.lineTo(centerX + 146, centerY + cageRadius + 26);
             ctx.strokeStyle = '#8d6e63';
             ctx.lineWidth = 10;
             ctx.lineCap = 'round';
@@ -1575,11 +1572,11 @@
         function drawTube() {
             ctx.save();
             ctx.beginPath();
-            ctx.moveTo(centerX, centerY + cageRadius - 10);
+            ctx.moveTo(centerX, centerY + cageRadius - 13);
             ctx.bezierCurveTo(
-                centerX - 50, centerY + cageRadius + 5,
-                centerX - 100, centerY + cageRadius + 2,
-                centerX - 110, centerY + cageRadius + 15
+                centerX - 66, centerY + cageRadius + 7,
+                centerX - 133, centerY + cageRadius + 3,
+                centerX - 146, centerY + cageRadius + 20
             );
             ctx.strokeStyle = 'rgba(223, 186, 115, 0.7)';
             ctx.lineWidth = 6;
