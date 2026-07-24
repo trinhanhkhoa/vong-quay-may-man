@@ -91,7 +91,7 @@
             gap: 15px;
             margin-bottom: 25px;
             width: 100%;
-            max-width: 1400px;
+            max-width: 1600px;
             z-index: 10;
         }
 
@@ -100,20 +100,20 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            gap: 40px;
+            gap: 50px;
             width: 100%;
         }
 
         .banner-info {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
+            align-items: center;
+            text-align: center;
         }
 
         .logo-tambinh {
-            height: 160px;
-            width: 160px;
+            height: 220px;
+            width: 220px;
             object-fit: cover;
             clip-path: circle(49%);
             filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
@@ -125,7 +125,7 @@
         }
 
         .banner-header h1 {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             font-weight: 800;
             color: #2f3542;
             letter-spacing: -0.5px;
@@ -135,7 +135,7 @@
         }
 
         .tambinh-title {
-            font-size: 2.2rem;
+            font-size: 2.8rem;
             font-weight: 800;
             color: var(--primary);
             text-transform: uppercase;
@@ -146,7 +146,7 @@
         }
 
         .slogan {
-            font-size: 1.15rem;
+            font-size: 1.4rem;
             font-weight: 600;
             color: var(--text-muted);
             letter-spacing: 0.5px;
@@ -156,13 +156,13 @@
 
         /* Compact highlight "Quay số may mắn" title */
         .main-title {
-            font-size: 3.5rem;
+            font-size: 4.8rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.5px;
-            margin-top: 10px;
+            margin-top: 15px;
             margin-bottom: 0px;
             filter: drop-shadow(0 2px 4px rgba(255, 71, 87, 0.1));
             animation: pulse 3s infinite alternate ease-in-out;
@@ -181,9 +181,9 @@
         /* Container & Layout (Grid layout with two columns - wider for LED) */
         .container {
             width: 100%;
-            max-width: 1400px;
+            max-width: 1600px;
             display: grid;
-            grid-template-columns: 1.4fr 0.9fr;
+            grid-template-columns: 1.5fr 1fr;
             gap: 30px;
             align-items: stretch;
             z-index: 10;
@@ -258,11 +258,11 @@
         }
 
         .panel-left {
-            max-width: 880px;
+            max-width: 1000px;
         }
 
         .panel-right {
-            max-width: 490px;
+            max-width: 600px;
             align-self: stretch;
         }
 
@@ -330,7 +330,7 @@
             gap: 10px;
             flex-grow: 1;
             overflow-y: auto;
-            max-height: 520px;
+            max-height: 650px;
             /* Limits size and scrolls if list gets long */
             padding-right: 5px;
         }
@@ -1037,7 +1037,7 @@
             </div>
 
             <div class="canvas-container">
-                <canvas id="lotteryCanvas" width="700" height="520"></canvas>
+                <canvas id="lotteryCanvas" width="820" height="600"></canvas>
             </div>
 
             <div class="controls">
@@ -1451,8 +1451,8 @@
         const ctx = canvas.getContext('2d');
 
         const centerX = canvas.width / 2;
-        const centerY = canvas.height / 2 - 20;
-        const cageRadius = 200;
+        const centerY = canvas.height / 2 - 25;
+        const cageRadius = 240;
 
         let cageAngle = 0;
         let rotationSpeed = 0;
@@ -1467,7 +1467,7 @@
                 this.y = centerY + (Math.random() - 0.5) * (cageRadius - 35);
                 this.vx = (Math.random() - 0.5) * 4;
                 this.vy = (Math.random() - 0.5) * 4;
-                this.radius = 19;
+                this.radius = 23;
                 this.color = color || `hsl(${Math.random() * 30 + 35}, 100%, 65%)`;
                 this.number = number;
             }
@@ -1536,7 +1536,7 @@
                 ctx.stroke();
 
                 ctx.fillStyle = '#4e342e';
-                ctx.font = 'bold 15px Arial';
+                ctx.font = 'bold 18px Arial';
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
                 ctx.fillText(this.number, this.x, this.y);
@@ -1558,18 +1558,18 @@
             ctx.fill();
 
             ctx.beginPath();
-            ctx.moveTo(centerX - 142, centerY + cageRadius + 25);
-            ctx.lineTo(centerX - 67, centerY);
-            ctx.lineTo(centerX + 67, centerY);
-            ctx.lineTo(centerX + 142, centerY + cageRadius + 25);
+            ctx.moveTo(centerX - 170, centerY + cageRadius + 30);
+            ctx.lineTo(centerX - 80, centerY);
+            ctx.lineTo(centerX + 80, centerY);
+            ctx.lineTo(centerX + 170, centerY + cageRadius + 30);
             ctx.strokeStyle = '#c5a880';
             ctx.lineWidth = 8;
             ctx.lineCap = 'round';
             ctx.stroke();
 
             ctx.beginPath();
-            ctx.moveTo(centerX - 184, centerY + cageRadius + 33);
-            ctx.lineTo(centerX + 184, centerY + cageRadius + 33);
+            ctx.moveTo(centerX - 220, centerY + cageRadius + 40);
+            ctx.lineTo(centerX + 220, centerY + cageRadius + 40);
             ctx.strokeStyle = '#8d6e63';
             ctx.lineWidth = 10;
             ctx.lineCap = 'round';
@@ -1615,11 +1615,11 @@
         function drawTube() {
             ctx.save();
             ctx.beginPath();
-            ctx.moveTo(centerX, centerY + cageRadius - 16);
+            ctx.moveTo(centerX, centerY + cageRadius - 20);
             ctx.bezierCurveTo(
-                centerX - 83, centerY + cageRadius + 9,
-                centerX - 167, centerY + cageRadius + 4,
-                centerX - 184, centerY + cageRadius + 25
+                centerX - 100, centerY + cageRadius + 10,
+                centerX - 200, centerY + cageRadius + 4,
+                centerX - 220, centerY + cageRadius + 30
             );
             ctx.strokeStyle = 'rgba(223, 186, 115, 0.7)';
             ctx.lineWidth = 6;
