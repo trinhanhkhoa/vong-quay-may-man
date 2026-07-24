@@ -8,7 +8,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
@@ -30,10 +32,11 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             width: 100%;
         }
@@ -383,6 +386,24 @@
             justify-content: center;
             font-size: 0.95rem;
             font-weight: 800;
+        }
+
+        .winner-info-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .winner-name {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .winner-phone-number {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            font-weight: 600;
         }
 
         .clear-winners-btn {
@@ -1023,7 +1044,7 @@
             </div>
 
             <div class="canvas-container">
-                <canvas id="lotteryCanvas" width="560" height="420"></canvas>
+                <canvas id="lotteryCanvas" width="700" height="520"></canvas>
             </div>
 
             <div class="controls">
@@ -1199,11 +1220,11 @@
                 const badge = document.createElement('div');
                 badge.className = 'winner-badge';
                 badge.innerHTML = `
-                    <div style="display:flex; align-items:center; gap:8px;">
+                    <div class="winner-info-left">
                         <span class="winner-index">${index + 1}</span>
-                        <span>${w.name}</span>
+                        <span class="winner-name">${w.name}</span>
                     </div>
-                    <span style="font-family: monospace; font-size:0.82rem; color:var(--text-muted);">${maskPhone(w.phone)}</span>
+                    <span class="winner-phone-number">${maskPhone(w.phone)}</span>
                 `;
                 container.appendChild(badge);
             });
@@ -1437,8 +1458,8 @@
         const ctx = canvas.getContext('2d');
 
         const centerX = canvas.width / 2;
-        const centerY = canvas.height / 2 - 15;
-        const cageRadius = 160;
+        const centerY = canvas.height / 2 - 20;
+        const cageRadius = 200;
 
         let cageAngle = 0;
         let rotationSpeed = 0;
@@ -1453,7 +1474,7 @@
                 this.y = centerY + (Math.random() - 0.5) * (cageRadius - 35);
                 this.vx = (Math.random() - 0.5) * 4;
                 this.vy = (Math.random() - 0.5) * 4;
-                this.radius = 15;
+                this.radius = 19;
                 this.color = color || `hsl(${Math.random() * 30 + 35}, 100%, 65%)`;
                 this.number = number;
             }
@@ -1522,7 +1543,7 @@
                 ctx.stroke();
 
                 ctx.fillStyle = '#4e342e';
-                ctx.font = 'bold 12px Outfit';
+                ctx.font = 'bold 15px Inter';
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
                 ctx.fillText(this.number, this.x, this.y);
@@ -1544,18 +1565,18 @@
             ctx.fill();
 
             ctx.beginPath();
-            ctx.moveTo(centerX - 113, centerY + cageRadius + 20);
-            ctx.lineTo(centerX - 53, centerY);
-            ctx.lineTo(centerX + 53, centerY);
-            ctx.lineTo(centerX + 113, centerY + cageRadius + 20);
+            ctx.moveTo(centerX - 142, centerY + cageRadius + 25);
+            ctx.lineTo(centerX - 67, centerY);
+            ctx.lineTo(centerX + 67, centerY);
+            ctx.lineTo(centerX + 142, centerY + cageRadius + 25);
             ctx.strokeStyle = '#c5a880';
             ctx.lineWidth = 8;
             ctx.lineCap = 'round';
             ctx.stroke();
 
             ctx.beginPath();
-            ctx.moveTo(centerX - 146, centerY + cageRadius + 26);
-            ctx.lineTo(centerX + 146, centerY + cageRadius + 26);
+            ctx.moveTo(centerX - 184, centerY + cageRadius + 33);
+            ctx.lineTo(centerX + 184, centerY + cageRadius + 33);
             ctx.strokeStyle = '#8d6e63';
             ctx.lineWidth = 10;
             ctx.lineCap = 'round';
@@ -1601,11 +1622,11 @@
         function drawTube() {
             ctx.save();
             ctx.beginPath();
-            ctx.moveTo(centerX, centerY + cageRadius - 13);
+            ctx.moveTo(centerX, centerY + cageRadius - 16);
             ctx.bezierCurveTo(
-                centerX - 66, centerY + cageRadius + 7,
-                centerX - 133, centerY + cageRadius + 3,
-                centerX - 146, centerY + cageRadius + 20
+                centerX - 83, centerY + cageRadius + 9,
+                centerX - 167, centerY + cageRadius + 4,
+                centerX - 184, centerY + cageRadius + 25
             );
             ctx.strokeStyle = 'rgba(223, 186, 115, 0.7)';
             ctx.lineWidth = 6;
