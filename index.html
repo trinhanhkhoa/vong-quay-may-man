@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -84,17 +84,26 @@
             }
         }
 
-        /* Banner Header Section with Logos (Horizontal Layout for LED screens) */
+        /* Banner Header Section (Centered content with top logo/info row and bottom main title) */
         .banner-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            width: 100%;
+            max-width: 1400px;
+            z-index: 10;
+        }
+
+        .banner-top-row {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
             gap: 40px;
-            margin-bottom: 25px;
             width: 100%;
-            max-width: 1400px;
-            z-index: 10;
         }
 
         .banner-info {
@@ -105,8 +114,8 @@
         }
 
         .logo-tambinh {
-            height: 180px;
-            width: 180px;
+            height: 160px;
+            width: 160px;
             object-fit: cover;
             clip-path: circle(49%);
             filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
@@ -144,11 +153,12 @@
             color: var(--text-muted);
             letter-spacing: 0.5px;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 0px;
         }
 
         /* Compact highlight "Quay số may mắn" title */
         .main-title {
+            font-family: 'Inter', sans-serif;
             font-size: 3.5rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
@@ -156,6 +166,7 @@
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
             letter-spacing: -0.5px;
+            margin-top: 10px;
             margin-bottom: 0px;
             filter: drop-shadow(0 2px 4px rgba(255, 71, 87, 0.1));
             animation: pulse 3s infinite alternate ease-in-out;
@@ -214,6 +225,22 @@
 
             .settings-toggle-btn span {
                 display: none !important;
+            }
+
+            .banner-top-row {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .banner-info {
+                align-items: center;
+                text-align: center;
+            }
+
+            .main-title {
+                font-size: 2.2rem !important;
+                text-align: center;
             }
         }
 
@@ -973,13 +1000,15 @@
 
     <!-- Official Event Header Banner with Logos -->
     <div class="banner-header">
-        <img class="logo-tambinh" src="./images/logo-phuong-tam-binh.png" alt="Ủy ban Nhân dân Phường Tam Bình">
-        <div class="banner-info">
-            <h1>Ngày hội Công dân số Inno - Tech Day 2026</h1>
-            <div class="tambinh-title">phường Tam Bình</div>
-            <div class="slogan">Công nghệ kiến tạo - Bệ phóng vươn xa</div>
-            <div class="main-title">Quay số may mắn</div>
+        <div class="banner-top-row">
+            <img class="logo-tambinh" src="./images/logo-phuong-tam-binh.png" alt="Ủy ban Nhân dân Phường Tam Bình">
+            <div class="banner-info">
+                <h1>Ngày hội Công dân số Inno - Tech Day 2026</h1>
+                <div class="tambinh-title">phường Tam Bình</div>
+                <div class="slogan">Công nghệ kiến tạo - Bệ phóng vươn xa</div>
+            </div>
         </div>
+        <div class="main-title">Quay số may mắn</div>
     </div>
 
     <div class="container">
