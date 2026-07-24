@@ -931,7 +931,7 @@
                 <div class="helper-text">
                     ℹ️ <strong>Yêu cầu:</strong> Sheet cần có các cột: <strong>HỌ VÀ TÊN</strong>, <strong>SỐ ĐIỆN
                         THOẠI</strong>, và cột <strong>TRẠNG THÁI</strong>.<br>
-                    Các dòng ghi trạng thái là <strong>"Không đủ"</strong> sẽ tự động bị loại bỏ khỏi danh sách quay
+                    Các dòng ghi trạng thái là <strong>"Không hợp lệ"</strong> sẽ tự động bị loại bỏ khỏi danh sách quay
                     thưởng.<br>
                     Hãy chia sẻ Sheet ở chế độ <strong>"Người có liên kết có thể xem"</strong>.<br>
                     <a href="https://docs.google.com/spreadsheets/d/1Z8P9F3b_67Wz_oGg06q9XpTchfE92BfK7pWswmQJpA8/edit?usp=sharing"
@@ -1386,7 +1386,8 @@
                 const status = statusIndex !== -1 && row[statusIndex] ? row[statusIndex].trim() : '';
 
                 if (name) {
-                    if (status.toLowerCase() === 'không đủ' || status.toLowerCase() === 'khong du') {
+                    const lowerStatus = status.toLowerCase();
+                    if (lowerStatus === 'không hợp lệ' || lowerStatus === 'khong hop le' || lowerStatus === 'không đủ' || lowerStatus === 'khong du') {
                         continue;
                     }
                     list.push({ name, phone });
