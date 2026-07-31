@@ -1581,16 +1581,16 @@
             ctx.lineTo(centerX - 80, centerY);
             ctx.lineTo(centerX + 80, centerY);
             ctx.lineTo(centerX + 170, centerY + cageRadius + 30);
-            ctx.strokeStyle = '#c5a880';
-            ctx.lineWidth = 8;
+            ctx.strokeStyle = '#8b6f47';
+            ctx.lineWidth = 10;
             ctx.lineCap = 'round';
             ctx.stroke();
 
             ctx.beginPath();
             ctx.moveTo(centerX - 220, centerY + cageRadius + 40);
             ctx.lineTo(centerX + 220, centerY + cageRadius + 40);
-            ctx.strokeStyle = '#8d6e63';
-            ctx.lineWidth = 10;
+            ctx.strokeStyle = '#5d4037';
+            ctx.lineWidth = 12;
             ctx.lineCap = 'round';
             ctx.stroke();
 
@@ -1602,8 +1602,8 @@
             ctx.translate(centerX, centerY);
             ctx.rotate(cageAngle);
 
-            ctx.strokeStyle = '#dfba73';
-            ctx.lineWidth = 2;
+            ctx.strokeStyle = '#b8860b';
+            ctx.lineWidth = 5;
 
             ctx.beginPath();
             ctx.arc(0, 0, cageRadius, 0, Math.PI * 2);
@@ -1615,16 +1615,16 @@
                 ctx.beginPath();
                 ctx.moveTo(Math.cos(angle) * cageRadius, Math.sin(angle) * cageRadius);
                 ctx.lineTo(-Math.cos(angle) * cageRadius, -Math.sin(angle) * cageRadius);
-                ctx.strokeStyle = 'rgba(223, 186, 115, 0.4)';
-                ctx.lineWidth = 1.2;
+                ctx.strokeStyle = 'rgba(184, 134, 11, 0.65)';
+                ctx.lineWidth = 2;
                 ctx.stroke();
             }
 
             for (let r = 25; r < cageRadius; r += 25) {
                 ctx.beginPath();
                 ctx.arc(0, 0, r, 0, Math.PI * 2);
-                ctx.strokeStyle = 'rgba(223, 186, 115, 0.5)';
-                ctx.lineWidth = 1.2;
+                ctx.strokeStyle = 'rgba(184, 134, 11, 0.65)';
+                ctx.lineWidth = 2;
                 ctx.stroke();
             }
 
@@ -1640,8 +1640,8 @@
                 centerX - 200, centerY + cageRadius + 4,
                 centerX - 220, centerY + cageRadius + 30
             );
-            ctx.strokeStyle = 'rgba(223, 186, 115, 0.7)';
-            ctx.lineWidth = 6;
+            ctx.strokeStyle = 'rgba(184, 134, 11, 0.85)';
+            ctx.lineWidth = 8;
             ctx.lineCap = 'round';
             ctx.stroke();
             ctx.restore();
