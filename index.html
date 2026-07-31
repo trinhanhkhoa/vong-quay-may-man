@@ -753,12 +753,12 @@
 
         .modal {
             background: white;
-            border-radius: 30px;
-            padding: 40px;
+            border-radius: 40px;
+            padding: 70px 50px;
             width: 95%;
-            max-width: 580px;
+            max-width: 1100px;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
             transform: scale(0.85);
             transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
@@ -771,24 +771,24 @@
 
         .modal-ribbon {
             background: linear-gradient(135deg, #ffd32c 0%, #ff9f1a 100%);
-            color: #5d4037;
-            padding: 8px 25px;
+            color: #ff3838;
+            padding: 15px 45px;
             font-weight: 800;
-            font-size: 1rem;
+            font-size: 2.2rem;
             display: inline-block;
-            border-radius: 30px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(255, 159, 26, 0.3);
+            border-radius: 45px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(255, 159, 26, 0.4);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         .winner-title {
-            font-size: 2rem;
+            font-size: 4rem;
             font-weight: 800;
             line-height: 1.4;
             color: #1e272e;
-            margin-bottom: 8px;
+            margin-bottom: 20px;
         }
 
         .winner-title span {
@@ -798,24 +798,32 @@
             -webkit-text-fill-color: transparent;
         }
 
+        .winner-title-sub {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #1e272e;
+            margin-top: -10px;
+            margin-bottom: 40px;
+        }
+
         .winner-phone {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #57606f;
-            letter-spacing: 1.5px;
-            margin-bottom: 20px;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #2f3542;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
         }
 
         .modal-close {
             background: var(--primary);
             color: white;
             border: none;
-            padding: 12px 35px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem;
+            padding: 20px 60px;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 1.8rem;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(255, 71, 87, 0.2);
+            box-shadow: 0 6px 20px rgba(255, 71, 87, 0.3);
             transition: all 0.3s;
             display: inline-flex;
             margin: 0 auto;
@@ -907,13 +915,27 @@
                 font-size: 1.4rem;
             }
 
+            .winner-title-sub {
+                font-size: 1.25rem;
+                margin-top: -5px;
+                margin-bottom: 15px;
+            }
+
             .winner-phone {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
+                margin-bottom: 20px;
             }
 
             .modal-ribbon {
                 padding: 6px 15px;
                 font-size: 0.85rem;
+                margin-bottom: 15px;
+            }
+
+            .modal-close {
+                padding: 10px 30px;
+                font-size: 1rem;
+                border-radius: 30px;
             }
         }
     </style>
@@ -1095,8 +1117,7 @@
                 CHÚC MỪNG <br><span id="winnerName">NGUYỄN VĂN A</span>
             </div>
             <div class="winner-phone" id="winnerPhone">0987***321</div>
-            <div class="winner-title" style="font-size: 1.8rem; margin-top: -10px; margin-bottom: 25px;">ĐÃ TRÚNG
-                THƯỞNG!</div>
+            <div class="winner-title-sub">ĐÃ TRÚNG THƯỞNG!</div>
             <button class="modal-close" onclick="closeModal()">Tuyệt vời</button>
         </div>
     </div>
