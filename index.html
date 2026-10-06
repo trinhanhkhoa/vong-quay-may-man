@@ -4,30 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ngày hội Công dân số Inno - Tech Day 2026 phường Tam Bình</title>
+    <title>Ngày hội chuyển đổi số xã Hiệp Phước - UỶ BAN NHÂN DÂN XÃ HIỆP PHƯỚC</title>
 
+
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
-            --primary: #ff4757;
-            --primary-hover: #ff6b81;
-            --gold: #eccc68;
-            --gold-dark: #ffa502;
-            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-            --card-bg: rgba(255, 255, 255, 0.8);
-            --card-border: rgba(255, 255, 255, 0.5);
-            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
-            --text-main: #2f3542;
-            --text-muted: #747d8c;
-            --success: #2ed573;
-            --info: #1e90ff;
+            /* Palette: Modern Tech Light with Royal Festive Accents */
+            --primary: #dc2626;
+            --primary-hover: #b91c1c;
+            --primary-glow: rgba(220, 38, 38, 0.25);
+            --primary-gradient: linear-gradient(135deg, #ef4444 0%, #dc2626 55%, #b91c1c 100%);
+
+            --tech-navy: #0f172a;
+            --tech-blue: #2563eb;
+            --tech-indigo: #4f46e5;
+            --tech-cyan: #06b6d4;
+            --tech-gradient: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #2563eb 100%);
+
+            --gold: #f59e0b;
+            --gold-dark: #d97706;
+            --gold-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+
+            --bg-page: #f8fafc;
+            --card-bg: rgba(255, 255, 255, 0.88);
+            --card-border: rgba(255, 255, 255, 0.95);
+            --card-border-subtle: rgba(226, 232, 240, 0.85);
+
+            --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+            --shadow-card: 0 20px 45px -15px rgba(15, 23, 42, 0.07), 0 0 0 1px rgba(255, 255, 255, 0.95), 0 1px 3px rgba(0, 0, 0, 0.03);
+            --shadow-hover: 0 25px 50px -12px rgba(15, 23, 42, 0.12);
+
+            --text-main: #0f172a;
+            /* Slate 900: sharp & authoritative */
+            --text-secondary: #334155;
+            /* Slate 700 */
+            --text-muted: #64748b;
+            /* Slate 500 */
+            --text-light: #94a3b8;
+            /* Slate 400 */
+
+            --success: #10b981;
+            --info: #0284c7;
+
+            --font-display: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         html,
@@ -37,7 +73,11 @@
         }
 
         body {
-            background: var(--bg-gradient);
+            background-color: var(--bg-page);
+            background-image:
+                radial-gradient(rgba(37, 99, 235, 0.07) 1.2px, transparent 1.2px),
+                linear-gradient(135deg, #f8fafc 0%, #f0f4fd 50%, #f8fafc 100%);
+            background-size: 24px 24px, 100% 100%;
             color: var(--text-main);
             height: 100vh;
             display: flex;
@@ -45,31 +85,44 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            /* Prevent scrolling completely */
-            padding: 5px 20px;
+            /* Prevent scrolling completely on presentation viewports */
+            padding: 8px 24px 16px 24px;
             position: relative;
         }
 
+        /* Ambient Glowing Tech Orbs (Soft, elegant depth) */
         .bg-blob {
             position: absolute;
-            width: 500px;
-            height: 500px;
+            width: 550px;
+            height: 550px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(236, 204, 104, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
-            filter: blur(50px);
-            z-index: -1;
-            animation: float 20s infinite alternate ease-in-out;
+            pointer-events: none;
+            z-index: 0;
+            filter: blur(80px);
+            opacity: 0.65;
+            animation: float 22s infinite alternate ease-in-out;
         }
 
         .blob-1 {
-            top: -10%;
-            left: -10%;
+            top: -12%;
+            left: -8%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, rgba(99, 102, 241, 0.1) 50%, transparent 70%);
         }
 
         .blob-2 {
-            bottom: -10%;
-            right: -10%;
-            background: radial-gradient(circle, rgba(255, 71, 87, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            bottom: -15%;
+            right: -8%;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, rgba(220, 38, 38, 0.08) 50%, transparent 70%);
+            animation-duration: 26s;
+        }
+
+        .blob-3 {
+            top: 25%;
+            right: 18%;
+            width: 420px;
+            height: 420px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, transparent 70%);
+            animation-duration: 18s;
         }
 
         @keyframes float {
@@ -78,20 +131,19 @@
             }
 
             100% {
-                transform: translate(50px, 50px) scale(1.1);
+                transform: translate(45px, 40px) scale(1.08);
             }
         }
 
-        /* Banner Header Section (Centered content with top logo/info row and bottom main title) */
+        /* Banner Header Section - Refined, Proportional Hierarchy */
         .banner-header {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 2px;
-            margin-bottom: 25px;
             width: 100%;
-            max-width: 1600px;
+            max-width: 1550px;
+            margin-bottom: 8px;
             z-index: 10;
         }
 
@@ -100,7 +152,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            gap: 50px;
+            gap: 25px;
             width: 100%;
         }
 
@@ -112,149 +164,167 @@
         }
 
         .logo-tambinh {
-            height: 220px;
-            width: 220px;
+            height: 110px;
+            width: 110px;
             object-fit: cover;
             clip-path: circle(49%);
-            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+            filter: drop-shadow(0 4px 14px rgba(37, 99, 235, 0.15));
             transition: transform 0.3s ease;
         }
 
         .logo-tambinh:hover {
-            transform: scale(1.05);
+            transform: scale(1.04);
         }
 
-        .banner-header h1 {
-            font-size: 2.2rem;
+        /* 1. Official Agency Badge */
+        .agency-title {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(37, 99, 235, 0.06);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 9999px;
+            padding: 6px 28px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .agency-title:hover {
+            background: rgba(37, 99, 235, 0.09);
+            border-color: rgba(37, 99, 235, 0.3);
+        }
+
+        .agency-title-text {
+            font-family: var(--font-display);
+            font-size: clamp(1.65rem, 2.2vw, 2.15rem);
             font-weight: 800;
-            color: #2f3542;
-            letter-spacing: -0.5px;
-            margin-bottom: 4px;
-            line-height: 1.2;
+            color: #1e40af;
             text-transform: uppercase;
+            letter-spacing: 1.2px;
+            line-height: 1.35;
         }
 
-        .tambinh-title {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-transform: uppercase;
+        /* 2. Main Event Headline */
+        .event-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.85rem, 3.8vw, 3.75rem);
+            font-weight: 900;
+            line-height: 1.15;
             letter-spacing: -0.5px;
-            margin-top: 2px;
-            margin-bottom: 6px;
-            display: inline-block;
-        }
-
-        .slogan {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            letter-spacing: 0.5px;
-            display: inline-block;
-            margin-bottom: 0px;
-        }
-
-        /* Compact highlight "Quay số may mắn" title */
-        .main-title {
-            font-size: 4.8rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            background: var(--tech-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -0.5px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            filter: drop-shadow(0 2px 4px rgba(255, 71, 87, 0.1));
-            animation: pulse 3s infinite alternate ease-in-out;
+            filter: drop-shadow(0 3px 6px rgba(37, 99, 235, 0.14));
         }
 
-        @keyframes pulse {
+        /* 3. Slogan Capsule */
+        .slogan {
+            font-family: var(--font-body);
+            font-size: 1.0rem;
+            font-weight: 600;
+            color: #4338ca;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(90deg, rgba(79, 70, 229, 0.07) 0%, rgba(6, 182, 212, 0.07) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 9999px;
+            padding: 4px 18px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 6px rgba(79, 70, 229, 0.04);
+        }
+
+        .slogan-bullet {
+            font-size: 0.75rem;
+            color: #6366f1;
+            opacity: 0.85;
+        }
+
+        /* 4. Action Title: "QUAY SỐ MAY MẮN" */
+        .main-title {
+            font-family: var(--font-display);
+            font-size: 3.0rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #dc2626 0%, #ea580c 45%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 0;
+            filter: drop-shadow(0 4px 14px rgba(220, 38, 38, 0.2));
+            animation: softPulse 3.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes softPulse {
             0% {
                 transform: scale(1);
+                filter: drop-shadow(0 4px 12px rgba(220, 38, 38, 0.18));
             }
 
             100% {
-                transform: scale(1.02);
+                transform: scale(1.018);
+                filter: drop-shadow(0 6px 18px rgba(220, 38, 38, 0.28));
             }
         }
 
-        /* Container & Layout (Grid layout with two columns - wider for LED) */
+        /* Container & Layout (Equal height twin-panel grid layout) */
         .container {
             width: 100%;
-            max-width: 1600px;
+            max-width: 1550px;
             display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 30px;
-            align-items: stretch;
+            grid-template-columns: 1.55fr 1fr;
+            gap: 20px;
+            align-items: stretch; /* Both left and right cards have the EXACT same height! */
             z-index: 10;
-        }
-
-        @media (max-width: 850px) {
-            body {
-                height: auto;
-                min-height: 100vh;
-                overflow-y: auto;
-                overflow-x: hidden;
-                justify-content: flex-start;
-                padding: 10px 10px 30px 10px;
-            }
-
-            .container {
-                grid-template-columns: 1fr;
-                gap: 15px;
-                padding: 0;
-            }
-
-            .panel-left,
-            .panel-right {
-                max-width: 100%;
-            }
-
-            .settings-toggle-btn {
-                width: 40px !important;
-                height: 40px !important;
-                padding: 0 !important;
-                border-radius: 50% !important;
-                justify-content: center !important;
-                gap: 0 !important;
-            }
-
-            .settings-toggle-btn span {
-                display: none !important;
-            }
-
-            .banner-top-row {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-
-            .banner-info {
-                align-items: center;
-                text-align: center;
-            }
-
-            .main-title {
-                font-size: 2.2rem !important;
-                text-align: center;
-            }
         }
 
         /* Main panels sharing properties */
         .panel {
             background: var(--card-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
             border: 1px solid var(--card-border);
             border-radius: 24px;
-            padding: 15px 25px;
-            box-shadow: var(--shadow);
+            padding: 16px 20px;
+            box-shadow: var(--shadow-card);
             display: flex;
             flex-direction: column;
             align-items: center;
             position: relative;
             overflow: hidden;
             width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .panel-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .panel-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Subtle top tech accent bar - pure tech blue */
+        .panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%);
+            opacity: 0.95;
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.35);
         }
 
         .panel-left {
@@ -267,31 +337,70 @@
         }
 
         .panel-title {
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
             align-self: flex-start;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             color: var(--text-main);
-            border-left: 4px solid var(--primary);
-            padding-left: 10px;
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+        .panel-title-text {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .panel-title-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(79, 70, 229, 0.14) 100%);
+            color: #2563eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            border: 1px solid rgba(37, 99, 235, 0.18);
+        }
+
         .canvas-container {
             position: relative;
             width: 100%;
+            flex: 1;
+            min-height: 460px;
             display: flex;
             justify-content: center;
-            margin-bottom: 8px;
+            align-items: center;
+            margin-bottom: 12px;
+            overflow: hidden;
+            border-radius: 20px;
+            background: radial-gradient(circle at 50% 36%, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.7) 50%, rgba(226, 232, 240, 0.45) 100%);
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.02);
         }
 
-        canvas {
-            max-width: 100%;
-            background: transparent;
-            border-radius: 16px;
+        body.theme-uniswap .canvas-container,
+        body.theme-oryzo .canvas-container {
+            background: radial-gradient(circle at 50% 36%, #ffffff 0%, rgba(253, 242, 248, 0.65) 35%, rgba(240, 249, 255, 0.6) 70%, rgba(245, 243, 255, 0.5) 100%);
+            border: 1px solid #f2f2f2;
+            box-shadow: 0 4px 20px rgba(19, 19, 19, 0.03);
+        }
+
+        #lotteryCanvas {
+            width: 100% !important;
+            height: 100% !important;
+            display: block;
+            outline: none;
+            cursor: grab;
+        }
+
+        #lotteryCanvas:active {
+            cursor: grabbing;
         }
 
         .controls {
@@ -299,45 +408,125 @@
             gap: 12px;
             width: 100%;
             justify-content: center;
-            margin-top: 5px;
+            margin-top: auto;
+            padding-top: 4px;
         }
 
-        /* Winners Container Styles (Repositioned to the right side) */
+        /* Winners Container Styles */
         .winners-container {
             width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
         }
 
         .winners-list-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-transform: uppercase;
-            border-left: 4px solid var(--primary);
-            padding-left: 10px;
-            margin-bottom: 12px;
+            font-family: var(--font-display);
+            font-size: 1.18rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: var(--text-main);
+            margin-bottom: 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
         }
 
+        .winners-list-title-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .winners-trophy-icon {
+            font-size: 1.2rem;
+        }
+
+        .winners-count-badge {
+            color: #dc2626;
+            font-weight: 900;
+            font-family: var(--font-display);
+        }
+
         .winners-badges {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            flex-grow: 1;
-            overflow-y: auto;
-            max-height: 650px;
-            /* Limits size and scrolls if list gets long */
-            padding-right: 5px;
+            gap: 7px;
+            flex: 1;
+            min-height: 450px;
+            overflow: hidden;
         }
 
-        /* Beautiful scrollbar for winners list */
+        /* Winners Pagination Bar */
+        .winners-pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: auto;
+            padding-top: 10px;
+            border-top: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .page-btn {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(226, 232, 240, 0.95);
+            color: var(--text-main);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+            transition: all 0.2s ease;
+        }
+
+        .page-btn:hover:not(:disabled) {
+            border-color: #2563eb;
+            color: #2563eb;
+            background: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+        }
+
+        .page-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            border-color: rgba(226, 232, 240, 0.5);
+        }
+
+        .page-indicator {
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .page-indicator strong {
+            color: #2563eb;
+            font-weight: 800;
+        }
+
+        body.theme-uniswap .page-btn {
+            border-color: var(--color-bone);
+            color: var(--color-ink);
+        }
+        body.theme-uniswap .page-btn:hover:not(:disabled) {
+            border-color: var(--color-uniswap-magenta);
+            color: var(--color-uniswap-magenta);
+            background: #fdf2f8;
+        }
+        body.theme-uniswap .page-indicator strong {
+            color: var(--color-uniswap-magenta);
+        }
+
+        /* Modern subtle scrollbar */
         .winners-badges::-webkit-scrollbar {
-            width: 6px;
+            width: 5px;
         }
 
         .winners-badges::-webkit-scrollbar-track {
@@ -346,80 +535,101 @@
         }
 
         .winners-badges::-webkit-scrollbar-thumb {
-            background: rgba(0, 0, 0, 0.1);
+            background: rgba(148, 163, 184, 0.4);
             border-radius: 10px;
+        }
+
+        .winners-badges::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 116, 139, 0.6);
         }
 
         .winner-badge {
-            background: white;
-            border: 2px solid var(--gold-dark);
-            border-left: 6px solid var(--gold-dark);
+            background: rgba(255, 255, 255, 0.94);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            border-left: 4px solid var(--gold);
             color: var(--text-main);
             padding: 12px 18px;
-            border-radius: 10px;
-            font-size: 1.2rem;
+            border-radius: 14px;
+            font-size: 1.15rem;
             font-weight: 600;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.04);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: popIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.25s ease;
+        }
+
+        .winner-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px -4px rgba(245, 158, 11, 0.16);
+            border-color: rgba(245, 158, 11, 0.45);
         }
 
         .winner-index {
-            background: linear-gradient(135deg, #ff4757 0%, #ff3b30 100%);
-            color: white;
-            width: 28px;
-            height: 28px;
+            background: var(--gold-gradient);
+            color: #78350f;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 0.95rem;
             font-weight: 800;
+            font-family: var(--font-display);
+            box-shadow: 0 2px 6px rgba(217, 119, 6, 0.25);
         }
 
         .winner-info-left {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .winner-name {
-            font-size: 1.25rem;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--text-main);
         }
 
         .winner-phone-number {
-            font-size: 1.1rem;
+            font-family: var(--font-body);
+            font-size: 1.05rem;
             color: var(--text-muted);
             font-weight: 600;
+            background: #f1f5f9;
+            padding: 3px 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(226, 232, 240, 0.7);
         }
 
         .clear-winners-btn {
-            background: none;
-            border: none;
-            color: #747d8c;
+            background: rgba(239, 68, 68, 0.06);
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            color: #dc2626;
             cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            padding: 6px 12px;
-            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 9999px;
             display: flex;
             align-items: center;
-            gap: 4px;
-            transition: all 0.2s;
+            gap: 5px;
+            transition: all 0.2s ease;
         }
 
         .clear-winners-btn:hover {
-            color: var(--primary);
-            background: rgba(255, 71, 87, 0.08);
+            background: #dc2626;
+            color: white;
+            border-color: #dc2626;
+            box-shadow: 0 4px 10px rgba(220, 38, 38, 0.25);
         }
 
         @keyframes popIn {
             from {
-                transform: scale(0.9);
+                transform: scale(0.92);
                 opacity: 0;
             }
 
@@ -429,30 +639,47 @@
             }
         }
 
-        /* Floating Settings Button */
-        .settings-toggle-btn {
+        /* Floating Top-Right Action Bar */
+        .top-actions-bar {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            background: white;
-            color: var(--text-main);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 10px 18px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            top: 16px;
+            right: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
             z-index: 100;
+        }
+
+        .theme-toggle-btn,
+        .settings-toggle-btn {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: var(--text-secondary);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            padding: 9px 16px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
             display: flex;
             align-items: center;
             gap: 8px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.25s ease;
         }
 
+        .theme-toggle-btn:hover,
         .settings-toggle-btn:hover {
-            background: #f1f2f6;
-            transform: scale(1.05);
+            background: white;
+            color: var(--text-main);
+            border-color: #94a3b8;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.1);
+        }
+
+        .theme-icon {
+            font-size: 0.95rem;
         }
 
         /* Slide-out Settings Sidebar */
@@ -462,11 +689,11 @@
             right: -450px;
             width: 450px;
             height: 100vh;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-left: 1px solid rgba(0, 0, 0, 0.08);
-            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-left: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: -15px 0 40px rgba(15, 23, 42, 0.08);
             z-index: 150;
             transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             padding: 30px;
@@ -485,12 +712,12 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.15);
+            background: rgba(15, 23, 42, 0.25);
             backdrop-filter: blur(4px);
             z-index: 140;
             opacity: 0;
             pointer-events: none;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.35s ease;
         }
 
         .sidebar-backdrop.active {
@@ -503,13 +730,15 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            padding-bottom: 12px;
         }
 
         .sidebar-header h2 {
+            font-family: var(--font-display);
             font-size: 1.3rem;
-            font-weight: 700;
+            font-weight: 800;
+            color: var(--text-main);
         }
 
         .close-sidebar-btn {
@@ -518,21 +747,27 @@
             cursor: pointer;
             color: var(--text-muted);
             padding: 5px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
         }
 
         .close-sidebar-btn:hover {
             color: var(--primary);
+            background: rgba(220, 38, 38, 0.08);
         }
 
-        /* Buttons and Form controls */
+        /* Buttons and Form Controls */
         button {
             padding: 12px 24px;
-            border-radius: 10px;
+            border-radius: 12px;
             border: none;
             font-size: 1.15rem;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -540,56 +775,86 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, #ff6b81 100%);
+            background: var(--primary-gradient);
             color: white;
-            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.25);
-            padding: 14px 35px;
-            font-size: 1.3rem;
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.25rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 10px 25px -4px rgba(220, 38, 38, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+            padding: 14px 40px;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: rotate(30deg);
+            transition: all 0.75s ease;
+        }
+
+        .btn-primary:hover::after {
+            left: 100%;
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 71, 87, 0.35);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 14px 30px -4px rgba(220, 38, 38, 0.48);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0) scale(0.99);
         }
 
         .btn-secondary {
             background: white;
-            color: var(--text-main);
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: var(--text-secondary);
+            border: 1px solid var(--card-border-subtle);
+            border-radius: 14px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
         }
 
         .btn-secondary:hover {
-            background: #f1f2f6;
+            background: #f8fafc;
+            color: var(--text-main);
+            border-color: #cbd5e1;
             transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
         }
 
         .btn-success {
-            background: var(--success);
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
-            box-shadow: 0 4px 12px rgba(46, 213, 115, 0.15);
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25);
         }
 
         .btn-success:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(46, 213, 115, 0.25);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
         }
 
-        /* Icon-only button styles */
         .btn-icon-only {
             padding: 12px;
-            border-radius: 12px;
+            border-radius: 14px;
             aspect-ratio: 1;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        /* Tab style in settings */
+        /* Tabs inside Settings */
         .tabs {
             display: flex;
-            background: rgba(0, 0, 0, 0.05);
+            background: #f1f5f9;
             padding: 4px;
-            border-radius: 10px;
+            border-radius: 12px;
             margin-bottom: 15px;
             width: 100%;
         }
@@ -597,19 +862,19 @@
         .tab {
             flex: 1;
             text-align: center;
-            padding: 8px;
+            padding: 8px 12px;
             cursor: pointer;
             border-radius: 8px;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 0.9rem;
-            transition: all 0.3s;
+            transition: all 0.2s ease;
             color: var(--text-muted);
         }
 
         .tab.active {
             background: white;
             color: var(--text-main);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
         }
 
         .tab-content {
@@ -625,7 +890,7 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .input-row {
@@ -635,50 +900,50 @@
 
         input[type="text"] {
             flex: 1;
-            padding: 10px 14px;
-            border-radius: 10px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 11px 16px;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
             outline: none;
-            background: rgba(255, 255, 255, 0.5);
+            background: white;
             font-size: 0.9rem;
-            transition: all 0.3s;
+            color: var(--text-main);
+            transition: all 0.2s ease;
         }
 
         input[type="text"]:focus {
-            border-color: var(--primary);
-            background: white;
-            box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.1);
+            border-color: var(--tech-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
         }
 
         textarea {
             width: 100%;
-            height: 100px;
+            height: 110px;
             border-radius: 12px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 10px;
+            border: 1px solid #cbd5e1;
+            padding: 12px;
             font-size: 0.9rem;
             resize: none;
             outline: none;
-            background: rgba(255, 255, 255, 0.5);
-            transition: all 0.3s;
+            background: white;
+            color: var(--text-main);
+            transition: all 0.2s ease;
         }
 
         textarea:focus {
-            border-color: var(--primary);
-            background: white;
-            box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.1);
+            border-color: var(--tech-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
         }
 
         .helper-text {
             font-size: 0.8rem;
             color: var(--text-muted);
-            line-height: 1.35;
+            line-height: 1.45;
         }
 
         .helper-text a {
-            color: var(--primary);
+            color: var(--tech-blue);
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .participant-table-container {
@@ -686,17 +951,17 @@
             flex-grow: 1;
             overflow-y: auto;
             max-height: 380px;
-            background: rgba(0, 0, 0, 0.02);
-            border-radius: 12px;
+            background: #f8fafc;
+            border-radius: 14px;
             padding: 8px;
-            border: 1px dashed rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
             margin-top: 10px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 1.15rem;
+            font-size: 1.05rem;
         }
 
         th {
@@ -704,44 +969,48 @@
             padding: 10px 12px;
             color: var(--text-muted);
             font-weight: 700;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #e2e8f0;
         }
 
         td {
             padding: 10px 12px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+            border-bottom: 1px solid #f1f5f9;
         }
 
         .status-badge {
-            font-size: 0.95rem;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-weight: 700;
             display: inline-block;
         }
 
         .status-success {
-            background: rgba(46, 213, 115, 0.1);
-            color: #2ed573;
+            background: rgba(16, 185, 129, 0.12);
+            color: #059669;
+            border: 1px solid rgba(16, 185, 129, 0.25);
         }
 
-        /* Modal styling */
+        /* Winner Celebration Modal Styling */
         .modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(47, 53, 66, 0.4);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(15, 23, 42, 0.45);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 1000;
             opacity: 0;
             pointer-events: none;
-            transition: opacity 0.5s ease;
+            transition: opacity 0.4s ease;
         }
 
         .modal-overlay.active {
@@ -750,17 +1019,29 @@
         }
 
         .modal {
-            background: white;
-            border-radius: 40px;
-            padding: 70px 50px;
-            width: 95%;
-            max-width: 1100px;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.95);
+            border-radius: 36px;
+            padding: 55px 40px;
+            width: 92%;
+            max-width: 820px;
             text-align: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-            transform: scale(0.85);
-            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 25px 70px -10px rgba(15, 23, 42, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.9);
+            transform: scale(0.9);
+            transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
             overflow: hidden;
+        }
+
+        .modal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #dc2626 0%, #f59e0b 50%, #2563eb 100%);
         }
 
         .modal-overlay.active .modal {
@@ -768,68 +1049,81 @@
         }
 
         .modal-ribbon {
-            background: linear-gradient(135deg, #ffd32c 0%, #ff9f1a 100%);
-            color: #ff3838;
-            padding: 15px 45px;
-            font-weight: 800;
-            font-size: 2.2rem;
-            display: inline-block;
-            border-radius: 45px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 15px rgba(255, 159, 26, 0.4);
+            background: var(--gold-gradient);
+            color: #78350f;
+            padding: 12px 36px;
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 1.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 9999px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 25px -4px rgba(217, 119, 6, 0.4);
             text-transform: uppercase;
             letter-spacing: 1.5px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
         .winner-title {
-            font-size: 4rem;
+            font-family: var(--font-display);
+            font-size: 3.2rem;
             font-weight: 800;
-            line-height: 1.4;
-            color: #1e272e;
-            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-main);
+            margin-bottom: 12px;
         }
 
         .winner-title span {
-            color: var(--primary);
-            background: linear-gradient(135deg, var(--primary) 0%, #ff6b81 100%);
+            background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .winner-title-sub {
-            font-size: 3.2rem;
+            font-family: var(--font-display);
+            font-size: 2.4rem;
             font-weight: 800;
-            color: #1e272e;
-            margin-top: -10px;
-            margin-bottom: 40px;
+            color: var(--text-main);
+            margin-top: -6px;
+            margin-bottom: 28px;
         }
 
         .winner-phone {
-            font-size: 3.5rem;
+            font-family: var(--font-body);
+            font-size: 2.8rem;
             font-weight: 800;
-            color: #2f3542;
+            color: #1e3a8a;
             letter-spacing: 2px;
-            margin-bottom: 40px;
+            margin-bottom: 32px;
+            background: #eff6ff;
+            display: inline-block;
+            padding: 8px 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(37, 99, 235, 0.2);
         }
 
         .modal-close {
-            background: var(--primary);
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
             color: white;
             border: none;
-            padding: 20px 60px;
-            border-radius: 60px;
+            padding: 16px 50px;
+            border-radius: 9999px;
+            font-family: var(--font-display);
             font-weight: 800;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
+            letter-spacing: 0.5px;
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(255, 71, 87, 0.3);
-            transition: all 0.3s;
+            box-shadow: 0 10px 25px -4px rgba(220, 38, 38, 0.4);
+            transition: all 0.25s ease;
             display: inline-flex;
             margin: 0 auto;
         }
 
         .modal-close:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(255, 71, 87, 0.3);
+            box-shadow: 0 14px 30px -4px rgba(220, 38, 38, 0.5);
         }
 
         #confetti {
@@ -842,119 +1136,814 @@
             z-index: 999;
         }
 
-        /* Responsive adjustments for sidebar and settings */
-        @media (max-width: 480px) {
-            .sidebar {
-                width: 100%;
-                right: -100%;
-                padding: 20px;
-            }
-        }
-
-        /* Responsive adjustments for mobile headers & banners */
-        @media (max-width: 600px) {
-            .logo-tambinh {
-                height: 140px;
-                width: 140px;
+        /* Responsive Breakpoints */
+        @media (max-width: 850px) {
+            body {
+                height: auto;
+                min-height: 100vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+                justify-content: flex-start;
+                padding: 12px 12px 30px 12px;
             }
 
-            .banner-header h1 {
-                font-size: 1.1rem;
+            .container {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding: 0;
             }
 
-            .tambinh-title {
-                font-size: 1.4rem;
+            .panel-left,
+            .panel-right {
+                max-width: 100%;
+            }
+
+            .settings-toggle-btn {
+                width: 40px !important;
+                height: 40px !important;
+                padding: 0 !important;
+                border-radius: 50% !important;
+                justify-content: center !important;
+            }
+
+            .settings-toggle-btn span {
+                display: none !important;
+            }
+
+            .banner-top-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .agency-title-text {
+                font-size: 1.45rem !important;
+            }
+
+            .event-title {
+                font-size: 2.1rem !important;
             }
 
             .main-title {
-                font-size: 1.9rem;
+                font-size: 2.4rem !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .agency-title-text {
+                font-size: 1.15rem !important;
+            }
+
+            .event-title {
+                font-size: 1.65rem !important;
             }
 
             .slogan {
-                font-size: 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            .main-title {
+                font-size: 2.0rem !important;
             }
 
             .panel {
-                padding: 15px 15px;
-                border-radius: 16px;
+                padding: 15px;
+                border-radius: 18px;
             }
 
             .panel-title {
-                font-size: 1.25rem;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
+                font-size: 1.1rem;
             }
 
             .winners-list-title {
-                font-size: 1.25rem;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
+                font-size: 1.1rem;
             }
 
             .winner-badge {
-                padding: 8px 10px;
-                font-size: 0.85rem;
+                padding: 10px 14px;
+                font-size: 0.95rem;
             }
 
-
-        }
-
-        /* Responsive modal styling for small screens */
-        @media (max-width: 480px) {
             .modal {
-                padding: 25px 15px;
-                border-radius: 20px;
-                width: 90%;
+                padding: 30px 20px;
+                border-radius: 24px;
             }
 
             .winner-title {
-                font-size: 1.4rem;
-            }
-
-            .winner-title-sub {
-                font-size: 1.25rem;
-                margin-top: -5px;
-                margin-bottom: 15px;
+                font-size: 1.8rem;
             }
 
             .winner-phone {
-                font-size: 1.2rem;
-                margin-bottom: 20px;
+                font-size: 1.5rem;
+                padding: 6px 18px;
             }
 
             .modal-ribbon {
-                padding: 6px 15px;
-                font-size: 0.85rem;
-                margin-bottom: 15px;
+                font-size: 1.1rem;
+                padding: 8px 20px;
             }
 
             .modal-close {
-                padding: 10px 30px;
-                font-size: 1rem;
-                border-radius: 30px;
+                padding: 12px 35px;
+                font-size: 1.1rem;
             }
         }
+
+        /* ===================================================================
+           UNISWAP PASTEL AIR THEME (Inspired by DESIGN.md)
+           Pure white airy canvas, floating chromatic pastel orbs,
+           subtle 20px rounded cards with hairline #f2f2f2 borders,
+           Ink #131313 typography, and vivid Uniswap Magenta #ff37c7 accents.
+        =================================================================== */
+        body.theme-uniswap,
+        body.theme-oryzo {
+            --color-uniswap-magenta: #ff37c7;
+            --color-ink: #131313;
+            --color-charcoal: #222222;
+            --color-steel: #6a6a6a;
+            --color-fog: #acacac;
+            --color-pure-white: #ffffff;
+            --color-bone: #f2f2f2;
+            --color-electric-violet: #8251fb;
+            --color-sky-cyan: #2abdff;
+            --color-mint-teal: #00c3a0;
+            --color-ember-orange: #ff4d00;
+
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(rgba(19, 19, 19, 0.03) 1px, transparent 1px),
+                linear-gradient(180deg, #ffffff 0%, #fdfdfd 100%);
+            background-size: 24px 24px, 100% 100%;
+            color: var(--color-ink);
+        }
+
+        /* Floating chromatic pastel orbs (DESIGN.md atmospheric cloud style) */
+        body.theme-uniswap .bg-blob,
+        body.theme-oryzo .bg-blob {
+            opacity: 0.35;
+            filter: blur(80px);
+        }
+
+        body.theme-uniswap .blob-1,
+        body.theme-oryzo .blob-1 {
+            background: radial-gradient(circle, rgba(255, 55, 199, 0.38) 0%, rgba(255, 77, 0, 0.15) 50%, transparent 70%);
+            width: 520px;
+            height: 520px;
+        }
+
+        body.theme-uniswap .blob-2,
+        body.theme-oryzo .blob-2 {
+            background: radial-gradient(circle, rgba(130, 81, 251, 0.32) 0%, rgba(42, 189, 255, 0.2) 50%, transparent 70%);
+            width: 480px;
+            height: 480px;
+        }
+
+        body.theme-uniswap .blob-3,
+        body.theme-oryzo .blob-3 {
+            background: radial-gradient(circle, rgba(0, 195, 160, 0.25) 0%, rgba(42, 189, 255, 0.25) 50%, transparent 70%);
+            width: 420px;
+            height: 420px;
+        }
+
+        /* Top Action Buttons */
+        body.theme-uniswap .theme-toggle-btn,
+        body.theme-oryzo .theme-toggle-btn {
+            background: #ffffff;
+            border: 1px solid var(--color-bone);
+            color: var(--color-ink);
+            box-shadow: 0 2px 10px rgba(19, 19, 19, 0.04);
+            font-weight: 600;
+            border-radius: 999999px;
+            letter-spacing: -0.01em;
+        }
+
+        body.theme-uniswap .theme-toggle-btn:hover,
+        body.theme-oryzo .theme-toggle-btn:hover {
+            border-color: var(--color-uniswap-magenta);
+            color: var(--color-uniswap-magenta);
+            background: #fdf2f8;
+            box-shadow: 0 4px 14px rgba(255, 55, 199, 0.15);
+        }
+
+        body.theme-uniswap .settings-toggle-btn,
+        body.theme-oryzo .settings-toggle-btn {
+            background: #ffffff;
+            border: 1px solid var(--color-bone);
+            color: var(--color-charcoal);
+            box-shadow: 0 2px 10px rgba(19, 19, 19, 0.04);
+            font-weight: 600;
+            border-radius: 999999px;
+        }
+
+        body.theme-uniswap .settings-toggle-btn:hover,
+        body.theme-oryzo .settings-toggle-btn:hover {
+            border-color: var(--color-uniswap-magenta);
+            color: var(--color-uniswap-magenta);
+            background: #fdf2f8;
+        }
+
+        /* Header in Uniswap Pastel Air Theme */
+        body.theme-uniswap .agency-title,
+        body.theme-oryzo .agency-title {
+            background: #ffffff;
+            border: 1px solid var(--color-bone);
+            border-radius: 999999px;
+            box-shadow: 0 2px 8px rgba(19, 19, 19, 0.04);
+            padding: 6px 30px;
+        }
+
+        body.theme-uniswap .agency-title:hover,
+        body.theme-oryzo .agency-title:hover {
+            border-color: #e5e7eb;
+            box-shadow: 0 4px 12px rgba(19, 19, 19, 0.06);
+        }
+
+        body.theme-uniswap .agency-title-text,
+        body.theme-oryzo .agency-title-text {
+            color: var(--color-ink);
+            font-weight: 800;
+            letter-spacing: 0.8px;
+        }
+
+        body.theme-uniswap .event-title,
+        body.theme-oryzo .event-title {
+            background: linear-gradient(135deg, #131313 0%, #222222 50%, #4b5563 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: var(--color-ink);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.04));
+        }
+
+        body.theme-uniswap .slogan,
+        body.theme-oryzo .slogan {
+            background: #ffffff;
+            border: 1px solid var(--color-bone);
+            color: var(--color-steel);
+            box-shadow: 0 2px 8px rgba(19, 19, 19, 0.02);
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            padding: 5px 22px;
+            border-radius: 999999px;
+        }
+
+        body.theme-uniswap .slogan-bullet,
+        body.theme-oryzo .slogan-bullet {
+            color: var(--color-uniswap-magenta);
+            font-size: 0.85rem;
+        }
+
+        body.theme-uniswap .main-title,
+        body.theme-oryzo .main-title {
+            background: linear-gradient(135deg, #ff37c7 0%, #d91b9f 40%, #8251fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            filter: drop-shadow(0 4px 14px rgba(255, 55, 199, 0.22));
+            animation: none;
+        }
+
+        /* Panels: 20px radius, 1px Bone border, pure white card surface */
+        body.theme-uniswap .panel,
+        body.theme-oryzo .panel {
+            background: #ffffff;
+            border: 1px solid var(--color-bone);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px -10px rgba(19, 19, 19, 0.04), 0 1px 3px rgba(19, 19, 19, 0.02);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        body.theme-uniswap .panel::before,
+        body.theme-oryzo .panel::before {
+            background: linear-gradient(90deg, #ff37c7 0%, #8251fb 50%, #2abdff 100%);
+            height: 2px;
+            box-shadow: none;
+            opacity: 0.9;
+        }
+
+        body.theme-uniswap .panel-title,
+        body.theme-oryzo .panel-title {
+            color: var(--color-ink);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        body.theme-uniswap .panel-title-icon,
+        body.theme-oryzo .panel-title-icon {
+            background: #fdf2f8;
+            border: 1px solid #fbcfe8;
+            color: var(--color-uniswap-magenta);
+            border-radius: 10px;
+        }
+
+        body.theme-uniswap .winners-list-title,
+        body.theme-oryzo .winners-list-title {
+            color: var(--color-ink);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        body.theme-uniswap .winners-count-badge,
+        body.theme-oryzo .winners-count-badge {
+            color: var(--color-uniswap-magenta);
+            font-weight: 700;
+        }
+
+        body.theme-uniswap .clear-winners-btn,
+        body.theme-oryzo .clear-winners-btn {
+            background: #ffffff;
+            border: 1px solid var(--color-bone);
+            color: var(--color-steel);
+            border-radius: 999999px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        body.theme-uniswap .clear-winners-btn:hover,
+        body.theme-oryzo .clear-winners-btn:hover {
+            border-color: #f43f5e;
+            color: #f43f5e;
+            background: #fff1f2;
+            box-shadow: none;
+        }
+
+        /* Winner Badges in Uniswap Theme: clean white card with soft magenta accent */
+        body.theme-uniswap .winner-badge,
+        body.theme-oryzo .winner-badge {
+            background: #ffffff;
+            border: 1px solid var(--color-bone);
+            border-left: 3px solid var(--color-uniswap-magenta);
+            color: var(--color-ink);
+            box-shadow: 0 2px 8px rgba(19, 19, 19, 0.02);
+            border-radius: 14px;
+            transition: all 0.25s ease;
+        }
+
+        body.theme-uniswap .winner-badge:hover,
+        body.theme-oryzo .winner-badge:hover {
+            border-color: #e5e7eb;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 55, 199, 0.08);
+        }
+
+        body.theme-uniswap .winner-index,
+        body.theme-oryzo .winner-index {
+            background: #fdf2f8;
+            color: var(--color-uniswap-magenta);
+            border: 1px solid #fbcfe8;
+            box-shadow: none;
+            font-weight: 700;
+            border-radius: 50%;
+        }
+
+        body.theme-uniswap .winner-name,
+        body.theme-oryzo .winner-name {
+            color: var(--color-ink);
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        body.theme-uniswap .winner-phone-number,
+        body.theme-oryzo .winner-phone-number {
+            background: #f8fafc;
+            color: var(--color-steel);
+            border: 1px solid var(--color-bone);
+            font-weight: 500;
+            border-radius: 999999px;
+        }
+
+        /* Primary Button: Filled Uniswap Magenta (#ff37c7) */
+        body.theme-uniswap .btn-primary,
+        body.theme-oryzo .btn-primary {
+            background: #ff37c7;
+            color: #ffffff;
+            border: none;
+            border-radius: 16px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            text-transform: none;
+            box-shadow: 0 4px 16px rgba(255, 55, 199, 0.35);
+            padding: 13px 34px;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        body.theme-uniswap .btn-primary::after,
+        body.theme-oryzo .btn-primary::after {
+            display: none;
+        }
+
+        body.theme-uniswap .btn-primary:hover,
+        body.theme-oryzo .btn-primary:hover {
+            background: #f50db4;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 55, 199, 0.45);
+        }
+
+        /* Secondary Soft-pink / White Button */
+        body.theme-uniswap .btn-secondary,
+        body.theme-oryzo .btn-secondary {
+            background: #ffffff;
+            color: var(--color-charcoal);
+            border: 1px solid var(--color-bone);
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(19, 19, 19, 0.03);
+            transition: all 0.2s ease;
+        }
+
+        body.theme-uniswap .btn-secondary:hover,
+        body.theme-oryzo .btn-secondary:hover {
+            background: #fdf2f8;
+            color: var(--color-uniswap-magenta);
+            border-color: #fbcfe8;
+            box-shadow: 0 4px 12px rgba(255, 55, 199, 0.12);
+        }
+
+        /* Sidebar Settings in Uniswap Pastel Air Theme */
+        body.theme-uniswap .sidebar,
+        body.theme-oryzo .sidebar {
+            background: #ffffff;
+            border-left: 1px solid var(--color-bone);
+            color: var(--color-ink);
+            box-shadow: -10px 0 35px rgba(19, 19, 19, 0.05);
+        }
+
+        body.theme-uniswap .sidebar-header,
+        body.theme-oryzo .sidebar-header {
+            border-bottom: 1px solid var(--color-bone);
+        }
+
+        body.theme-uniswap .sidebar-header h2,
+        body.theme-oryzo .sidebar-header h2 {
+            color: var(--color-ink);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        body.theme-uniswap .close-sidebar-btn,
+        body.theme-oryzo .close-sidebar-btn {
+            color: var(--color-steel);
+        }
+
+        body.theme-uniswap .close-sidebar-btn:hover,
+        body.theme-oryzo .close-sidebar-btn:hover {
+            color: var(--color-uniswap-magenta);
+            background: #fdf2f8;
+        }
+
+        body.theme-uniswap .tabs,
+        body.theme-oryzo .tabs {
+            background: #f8fafc;
+            border: 1px solid var(--color-bone);
+            border-radius: 14px;
+        }
+
+        body.theme-uniswap .tab,
+        body.theme-oryzo .tab {
+            color: var(--color-steel);
+            font-weight: 600;
+        }
+
+        body.theme-uniswap .tab.active,
+        body.theme-oryzo .tab.active {
+            background: #ffffff;
+            color: var(--color-uniswap-magenta);
+            border: 1px solid var(--color-bone);
+            box-shadow: 0 2px 8px rgba(19, 19, 19, 0.04);
+            border-radius: 10px;
+        }
+
+        body.theme-uniswap input[type="text"],
+        body.theme-uniswap textarea,
+        body.theme-oryzo input[type="text"],
+        body.theme-oryzo textarea {
+            background: #ffffff;
+            border: 1px solid var(--color-bone);
+            color: var(--color-ink);
+            border-radius: 12px;
+        }
+
+        body.theme-uniswap input[type="text"]:focus,
+        body.theme-uniswap textarea:focus,
+        body.theme-oryzo input[type="text"]:focus,
+        body.theme-oryzo textarea:focus {
+            border-color: var(--color-uniswap-magenta);
+            box-shadow: 0 0 0 3px rgba(255, 55, 199, 0.15);
+        }
+
+        body.theme-uniswap .participant-table-container,
+        body.theme-oryzo .participant-table-container {
+            background: #ffffff;
+            border: 1px solid var(--color-bone);
+            border-radius: 14px;
+        }
+
+        body.theme-uniswap th,
+        body.theme-oryzo th {
+            color: var(--color-steel);
+            border-bottom: 1px solid var(--color-bone);
+            background: #f8fafc;
+        }
+
+        body.theme-uniswap td,
+        body.theme-oryzo td {
+            color: var(--color-ink);
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        body.theme-uniswap .helper-text,
+        body.theme-oryzo .helper-text {
+            color: var(--color-steel);
+        }
+
+        body.theme-uniswap .helper-text a,
+        body.theme-oryzo .helper-text a {
+            color: var(--color-uniswap-magenta);
+        }
+
+        /* Modal in Uniswap Theme: Pure white airy modal with soft magenta glow */
+        body.theme-uniswap .modal-overlay,
+        body.theme-oryzo .modal-overlay {
+            background: rgba(19, 19, 19, 0.35);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        body.theme-uniswap .modal,
+        body.theme-oryzo .modal {
+            background: #ffffff;
+            border: 1px solid var(--color-bone);
+            box-shadow: 0 25px 60px -12px rgba(255, 55, 199, 0.25), 0 10px 25px rgba(19, 19, 19, 0.08);
+            border-radius: 24px;
+        }
+
+        body.theme-uniswap .modal::before,
+        body.theme-oryzo .modal::before {
+            background: linear-gradient(90deg, #ff37c7 0%, #8251fb 50%, #2abdff 100%);
+            height: 3px;
+        }
+
+        body.theme-uniswap .modal-ribbon,
+        body.theme-oryzo .modal-ribbon {
+            background: #fdf2f8;
+            border: 1px solid #fbcfe8;
+            color: var(--color-uniswap-magenta);
+            box-shadow: none;
+            border-radius: 999999px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        body.theme-uniswap .winner-title,
+        body.theme-oryzo .winner-title {
+            color: var(--color-ink);
+            font-weight: 800;
+        }
+
+        body.theme-uniswap .winner-title span,
+        body.theme-oryzo .winner-title span {
+            background: linear-gradient(135deg, #ff37c7 0%, #8251fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        body.theme-uniswap .winner-title-sub,
+        body.theme-oryzo .winner-title-sub {
+            color: var(--color-steel);
+            font-weight: 600;
+        }
+
+        body.theme-uniswap .winner-phone,
+        body.theme-oryzo .winner-phone {
+            background: #f8fafc;
+            border: 1px solid var(--color-bone);
+            color: var(--color-ink);
+            font-weight: 700;
+            border-radius: 999999px;
+        }
+
+        body.theme-uniswap .modal-close,
+        body.theme-oryzo .modal-close {
+            background: #ff37c7;
+            border: none;
+            color: #ffffff;
+            border-radius: 999999px;
+            font-weight: 700;
+            box-shadow: 0 4px 16px rgba(255, 55, 199, 0.35);
+        }
+
+        body.theme-uniswap .modal-close:hover,
+        body.theme-oryzo .modal-close:hover {
+            background: #f50db4;
+            color: #ffffff;
+            box-shadow: 0 8px 24px rgba(255, 55, 199, 0.45);
+        }
+        /* Background Upload Button in Top Action Bar */
+        .bg-upload-btn {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: var(--text-secondary);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            padding: 9px 16px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .bg-upload-btn:hover {
+            background: white;
+            color: #2563eb;
+            border-color: #2563eb;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12);
+        }
+
+        /* Sidebar Background Customization Styles */
+        .bg-upload-dropzone {
+            border: 2px dashed rgba(37, 99, 235, 0.35);
+            background: rgba(240, 245, 255, 0.5);
+            border-radius: 14px;
+            padding: 24px 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .bg-upload-dropzone:hover {
+            border-color: #2563eb;
+            background: rgba(235, 245, 255, 0.85);
+            transform: translateY(-2px);
+        }
+
+        .current-bg-thumbnail {
+            width: 100%;
+            height: 120px;
+            border-radius: 10px;
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            background-size: cover;
+            background-position: center;
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        /* Background Toggle Button & Styling */
+        .bg-toggle-btn {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: var(--text-secondary);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            padding: 9px 16px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .bg-toggle-btn:hover {
+            background: white;
+            color: #2563eb;
+            border-color: #2563eb;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12);
+        }
+
+        .bg-toggle-btn.active {
+            background: #ffffff;
+            color: #1d4ed8;
+            border-color: #3b82f6;
+            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.16);
+        }
+
+        /* Frosted translucent overlay layout over the background image */
+        .bg-overlay-scrim {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(240, 246, 255, 0.55) 50%, rgba(224, 236, 255, 0.65) 100%);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 0;
+            pointer-events: none;
+            transition: all 0.4s ease;
+        }
+
+        /* Custom Background Mode (User-provided image with frosted layout) */
+        body.bg-image-active {
+            background-color: #0b1936 !important;
+            background-image: var(--custom-bg-url) !important;
+            background-size: cover !important;
+            background-position: center top !important;
+            background-attachment: fixed !important;
+            background-repeat: no-repeat !important;
+        }
+
+        body.bg-image-active .bg-overlay-scrim {
+            display: block;
+        }
+
+        body.bg-image-active .bg-blob {
+            display: none;
+        }
+
+        body.bg-image-active .panel {
+            background: rgba(255, 255, 255, 0.88) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 16px 45px -10px rgba(11, 25, 54, 0.16), 0 0 0 1px rgba(255, 255, 255, 0.8) !important;
+        }
+
+        body.bg-image-active .canvas-container {
+            background: radial-gradient(circle at 50% 36%, rgba(255, 255, 255, 0.94) 0%, rgba(240, 246, 255, 0.62) 65%, rgba(225, 238, 255, 0.42) 100%) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.9) !important;
+            box-shadow: 0 4px 20px rgba(11, 25, 54, 0.08) !important;
+        }
+
+        body.bg-image-active .agency-title {
+            background: rgba(255, 255, 255, 0.88) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 4px 12px rgba(11, 25, 54, 0.08) !important;
+        }
+
+        body.bg-image-active .slogan {
+            background: rgba(255, 255, 255, 0.88) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 4px 12px rgba(11, 25, 54, 0.08) !important;
+        }
+
+        body.bg-image-active .winner-badge {
+            background: rgba(255, 255, 255, 0.92) !important;
+            backdrop-filter: blur(8px) !important;
+            -webkit-backdrop-filter: blur(8px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.9) !important;
+        }
+
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
+    <div class="bg-overlay-scrim"></div>
 
     <div class="bg-blob blob-1"></div>
     <div class="bg-blob blob-2"></div>
+    <div class="bg-blob blob-3"></div>
 
-    <!-- Floating setup button for Organizers -->
-    <button class="settings-toggle-btn" onclick="toggleSidebar(true)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="3"></circle>
-            <path
-                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z">
-            </path>
-        </svg>
-        <span>Dữ liệu & Cài đặt</span>
-    </button>
+    <!-- Floating Top-Right Action Controls (Theme Switcher + Settings) -->
+    <div class="top-actions-bar">
+        <button id="bgToggleBtn" class="bg-toggle-btn" onclick="toggleCustomBg()"
+            title="Đang hiển thị nền trắng mặc định (Bấm để tải hoặc bật ảnh nền)">
+            <span class="bg-icon">⚪</span>
+            <span class="bg-label">Nền: Trắng</span>
+        </button>
+
+        <button id="uploadBgBtn" class="bg-upload-btn" onclick="document.getElementById('bgFileInput').click()"
+            title="Chọn và tải lên hình ảnh mới từ máy tính">
+            <span class="upload-icon">📁</span>
+            <span class="upload-label">Tải ảnh nền</span>
+        </button>
+        <input type="file" id="bgFileInput" accept="image/*" style="display: none;" onchange="handleUserBgUpload(event)">
+
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()"
+            title="Chuyển đổi: Sáng Công Nghệ / Uniswap Pastel Air">
+            <span class="theme-icon">🦄</span>
+            <span class="theme-label">Uniswap Pastel</span>
+        </button>
+
+        <button class="settings-toggle-btn" onclick="toggleSidebar(true)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z">
+                </path>
+            </svg>
+            <span>Dữ liệu & Cài đặt</span>
+        </button>
+    </div>
 
     <!-- Sidebar Backdrop -->
     <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebar(false)"></div>
@@ -975,6 +1964,7 @@
         <div class="tabs">
             <div class="tab active" id="sheetTabBtn" onclick="switchTab('sheet-tab', this)">Google Sheets</div>
             <div class="tab" id="manualTabBtn" onclick="switchTab('manual-tab', this)">Nhập tay</div>
+            <div class="tab" id="bgTabBtn" onclick="switchTab('bg-tab', this)">🖼️ Hình nền</div>
         </div>
 
         <!-- Tab 1: Google Sheet -->
@@ -1008,6 +1998,47 @@
             </div>
         </div>
 
+        <!-- Tab 3: Background Customization -->
+        <div id="bg-tab" class="tab-content">
+            <div class="input-group">
+                <label style="font-size: 0.92rem; font-weight: 700; margin-bottom: 8px;">Tải hình nền từ máy tính:</label>
+                
+                <div class="bg-upload-dropzone" onclick="document.getElementById('bgFileInputSidebar').click()">
+                    <input type="file" id="bgFileInputSidebar" accept="image/*" style="display: none;" onchange="handleUserBgUpload(event)">
+                    <div style="font-size: 2.2rem; margin-bottom: 6px;">📷</div>
+                    <div style="font-weight: 700; color: var(--text-main); font-size: 0.95rem;">Chọn ảnh nền từ thiết bị</div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Hỗ trợ ảnh JPG, PNG, WebP</div>
+                </div>
+
+                <!-- Preview Box of Current Background -->
+                <div class="bg-preview-card" style="margin-top: 14px;">
+                    <div style="font-size: 0.82rem; font-weight: 600; color: var(--text-muted); margin-bottom: 6px;">Trạng thái nền:</div>
+                    <div id="currentBgPreview" class="current-bg-thumbnail" style="background-image: none; background-color: #f8fafc; display: flex; align-items: center; justify-content: center; border: 1px dashed #cbd5e1;">
+                        <span style="font-size: 0.8rem; color: #94a3b8; font-weight: 500;">⚪ Đang dùng nền trắng mặc định</span>
+                    </div>
+                    <div style="display: flex; gap: 8px; margin-top: 10px;">
+                        <button class="btn-secondary" style="flex: 1; padding: 8px 10px; font-size: 0.82rem; font-weight: 600;" onclick="document.getElementById('bgFileInputSidebar').click()">
+                            📁 Tải ảnh nền
+                        </button>
+                        <button class="btn-secondary" style="flex: 1; padding: 8px 10px; font-size: 0.82rem; font-weight: 600; border-color: #cbd5e1;" onclick="resetToDefaultBg()">
+                            ⚪ Về nền trắng
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Frosted Layout Blur Slider -->
+                <div style="margin-top: 16px; background: rgba(241, 245, 249, 0.7); padding: 12px 14px; border-radius: 12px; border: 1px solid var(--card-border-subtle);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                        <label style="font-size: 0.85rem; font-weight: 600;">Độ mờ lớp phủ layout:</label>
+                        <span id="scrimOpacityVal" style="font-weight: 700; color: var(--primary); font-size: 0.88rem;">55%</span>
+                    </div>
+                    <input type="range" id="scrimOpacityRange" min="15" max="85" value="55" style="width: 100%; cursor: pointer;" oninput="adjustScrimOpacity(this.value)">
+                    <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">Tăng giảm lớp phủ để làm dịu ảnh nền, giúp chữ và vòng quay 3D nổi bật.</div>
+                </div>
+            </div>
+        </div>
+
+
         <!-- Participant List Box -->
         <div style="width: 100%; display: flex; flex-direction: column; flex-grow: 1; margin-top: 10px;">
             <div
@@ -1035,11 +2066,20 @@
     <!-- Official Event Header Banner with Logos -->
     <div class="banner-header">
         <div class="banner-top-row">
-            <img class="logo-tambinh" src="./images/logo-phuong-tam-binh.png" alt="Ủy ban Nhân dân Phường Tam Bình">
+            <!-- <img class="logo-tambinh" src="./images/logo-phuong-tam-binh.png" alt="UỶ BAN NHÂN DÂN XÃ HIỆP PHƯỚC"> -->
             <div class="banner-info">
-                <h1>Ngày hội Công dân số Inno - Tech Day 2026</h1>
-                <div class="tambinh-title">phường Tam Bình</div>
-                <div class="slogan">Công nghệ kiến tạo - Bệ phóng vươn xa</div>
+                <!-- Cơ quan chủ trì / tổ chức -->
+                <div class="agency-title">
+                    <span class="agency-title-text">UỶ BAN NHÂN DÂN XÃ HIỆP PHƯỚC</span>
+                </div>
+                <!-- Tiêu đề sự kiện chính -->
+                <h1 class="event-title">NGÀY HỘI CHUYỂN ĐỔI SỐ XÃ HIỆP PHƯỚC</h1>
+                <!-- Khẩu hiệu công nghệ -->
+                <div class="slogan">
+                    <span class="slogan-bullet">✦</span>
+                    <span>Hành động hôm nay – Kiến tạo tương lai</span>
+                    <span class="slogan-bullet">✦</span>
+                </div>
             </div>
         </div>
         <div class="main-title">QUAY SỐ MAY MẮN</div>
@@ -1049,7 +2089,16 @@
         <!-- Compact Main Game Panel (Left Column) -->
         <div class="panel panel-left">
             <div class="panel-title">
-                <span>LỒNG QUAY SỐ MAY MẮN</span>
+                <div class="panel-title-text">
+                    <span class="panel-title-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                        </svg>
+                    </span>
+                    <span>LỒNG QUAY SỐ MAY MẮN</span>
+                </div>
                 <span id="validCount" style="display: none;">0</span>
                 <span id="syncBadge" class="status-badge status-success" style="font-size: 0.75rem; display: none;">Đã
                     đồng bộ</span>
@@ -1081,11 +2130,13 @@
         <div class="panel panel-right">
             <div class="winners-container">
                 <div class="winners-list-title">
-                    <span>🏆 Đã trúng giải <span id="winnersCount"
-                            style="color: var(--primary); font-weight: 800;">(0)</span></span>
+                    <div class="winners-list-title-text">
+                        <span class="winners-trophy-icon">🏆</span>
+                        <span>Đã trúng giải <span id="winnersCount" class="winners-count-badge">(0)</span></span>
+                    </div>
                     <button class="clear-winners-btn" onclick="clearWinnersHistory()"
                         title="Xóa lịch sử những người đã trúng giải để chơi lại từ đầu">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="3 6 5 6 21 6"></polyline>
                             <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
@@ -1093,7 +2144,7 @@
                             <line x1="10" y1="11" x2="10" y2="17"></line>
                             <line x1="14" y1="11" x2="14" y2="17"></line>
                         </svg>
-                        Xóa lịch sử
+                        <span>Xóa lịch sử</span>
                     </button>
                 </div>
 
@@ -1102,6 +2153,9 @@
                         style="color: var(--text-muted); font-size: 0.85rem; font-style: italic; width: 100%; text-align: center; line-height: 4;">Chưa
                         có ai trúng thưởng</span>
                 </div>
+
+                <!-- Pagination for winners (max 10 per page) -->
+                <div class="winners-pagination" id="winnersPagination" style="display: none;"></div>
             </div>
         </div>
     </div>
@@ -1216,34 +2270,81 @@
             });
         }
 
+        const WINNERS_PER_PAGE = 10;
+        let currentWinnersPage = 1;
+
         function updateWinnersUI() {
             const container = document.getElementById('winnersList');
             const countSpan = document.getElementById('winnersCount');
+            const paginationEl = document.getElementById('winnersPagination');
             countSpan.textContent = `(${winners.length})`;
 
             if (winners.length === 0) {
                 container.innerHTML = `<span style="color: var(--text-muted); font-size: 0.85rem; font-style: italic; width: 100%; text-align: center; line-height: 4;">Chưa có ai trúng thưởng</span>`;
+                if (paginationEl) paginationEl.style.display = 'none';
                 return;
             }
 
+            const totalPages = Math.ceil(winners.length / WINNERS_PER_PAGE) || 1;
+            if (currentWinnersPage > totalPages) {
+                currentWinnersPage = totalPages;
+            }
+            if (currentWinnersPage < 1) {
+                currentWinnersPage = 1;
+            }
+
+            const startIndex = (currentWinnersPage - 1) * WINNERS_PER_PAGE;
+            const pageWinners = winners.slice(startIndex, startIndex + WINNERS_PER_PAGE);
+
             container.innerHTML = '';
-            winners.forEach((w, index) => {
+            pageWinners.forEach((w, index) => {
+                const displayIndex = startIndex + index + 1; // Sequential numbering starting from correct index!
                 const badge = document.createElement('div');
                 badge.className = 'winner-badge';
                 badge.innerHTML = `
                     <div class="winner-info-left">
-                        <span class="winner-index">${index + 1}</span>
+                        <span class="winner-index">${displayIndex}</span>
                         <span class="winner-name">${w.name}</span>
                     </div>
                     <span class="winner-phone-number">${maskPhone(w.phone)}</span>
                 `;
                 container.appendChild(badge);
             });
+
+            // Update pagination UI
+            if (paginationEl) {
+                if (totalPages > 1) {
+                    paginationEl.style.display = 'flex';
+                    paginationEl.innerHTML = `
+                        <button class="page-btn" onclick="changeWinnersPage(-1)" ${currentWinnersPage === 1 ? 'disabled' : ''}>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            <span>Trang trước</span>
+                        </button>
+                        <span class="page-indicator">Trang <strong>${currentWinnersPage}</strong> / ${totalPages}</span>
+                        <button class="page-btn" onclick="changeWinnersPage(1)" ${currentWinnersPage === totalPages ? 'disabled' : ''}>
+                            <span>Trang sau</span>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                    `;
+                } else {
+                    paginationEl.style.display = 'none';
+                }
+            }
+        }
+
+        function changeWinnersPage(delta) {
+            const totalPages = Math.ceil(winners.length / WINNERS_PER_PAGE) || 1;
+            const newPage = currentWinnersPage + delta;
+            if (newPage >= 1 && newPage <= totalPages) {
+                currentWinnersPage = newPage;
+                updateWinnersUI();
+            }
         }
 
         function clearWinnersHistory() {
             if (confirm("Bạn có chắc chắn muốn XÓA LỊCH SỬ trúng thưởng? Việc này sẽ đưa tất cả người đã trúng giải trở lại danh sách quay số.")) {
                 winners = [];
+                currentWinnersPage = 1;
                 localStorage.removeItem('lottery_winners');
                 updateWinnersUI();
 
@@ -1465,217 +2566,715 @@
         updateWinnersUI();
 
         // CANVAS PHYSICS & ROTATION SIMULATION OF CAGE AND BALLS
+        // ============================================================================
+        // 3D REALISTIC LUCKY DRAW GUMBALL & CAPSULE MACHINE (THREE.JS WEBGL)
+        // High-end glass globe, glossy red vintage pedestal, chrome rotary handle & chute,
+        // 3D tumbling numbered balls with real physics & winner drop animation.
+        // ============================================================================
         const canvas = document.getElementById('lotteryCanvas');
-        const ctx = canvas.getContext('2d');
+        const container = canvas.parentElement;
 
-        const centerX = canvas.width / 2;
-        const centerY = canvas.height / 2 - 25;
-        const cageRadius = 240;
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(35, container.clientWidth / container.clientHeight, 0.1, 1000);
+        camera.position.set(0, 2.05, 18.5);
+        camera.lookAt(0, 1.75, 0);
 
-        let cageAngle = 0;
-        let rotationSpeed = 0;
-        let isSpinning = false;
-        let spinTimeLeft = 0;
-        let spinDuration = 0;
-        let selectedWinner = null;
+        const renderer = new THREE.WebGLRenderer({
+            canvas: canvas,
+            antialias: true,
+            alpha: true,
+            powerPreference: 'high-performance'
+        });
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.15;
 
-        class Ball {
-            constructor(number, color) {
-                this.x = centerX + (Math.random() - 0.5) * (cageRadius - 35);
-                this.y = centerY + (Math.random() - 0.5) * (cageRadius - 35);
-                this.vx = (Math.random() - 0.5) * 4;
-                this.vy = (Math.random() - 0.5) * 4;
-                this.radius = 23;
-                this.color = color || `hsl(${Math.random() * 30 + 35}, 100%, 65%)`;
-                this.number = number;
+        // Interactive mouse parallax tilt
+        let mouseX = 0, mouseY = 0;
+        let targetTiltX = 0, targetTiltY = 0;
+        let isPointerDown = false, prevPointerX = 0, manualRotY = 0;
+
+        container.addEventListener('mousemove', (e) => {
+            const rect = container.getBoundingClientRect();
+            mouseX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+            mouseY = -(((e.clientY - rect.top) / rect.height) * 2 - 1);
+            if (!isPointerDown) {
+                targetTiltY = mouseX * 0.35;
+                targetTiltX = -mouseY * 0.15;
             }
+        });
 
-            update() {
-                this.vy += 0.25;
-
-                const speed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
-                if (speed > 16) {
-                    this.vx = (this.vx / speed) * 16;
-                    this.vy = (this.vy / speed) * 16;
-                }
-
-                this.x += this.vx;
-                this.y += this.vy;
-
-                const dx = this.x - centerX;
-                const dy = this.y - centerY;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                const limit = cageRadius - this.radius - 8;
-
-                if (dist > limit) {
-                    const nx = dx / dist;
-                    const ny = dy / dist;
-
-                    this.x = centerX + nx * limit;
-                    this.y = centerY + ny * limit;
-
-                    const dotProduct = this.vx * nx + this.vy * ny;
-                    this.vx = (this.vx - 2 * dotProduct * nx) * 0.85;
-                    this.vy = (this.vy - 2 * dotProduct * ny) * 0.85;
-
-                    if (Math.abs(rotationSpeed) > 0.05) {
-                        const tx = -ny;
-                        const ty = nx;
-                        const tangentialVelocity = rotationSpeed * cageRadius;
-
-                        this.vx += tx * tangentialVelocity * 0.15;
-                        this.vy += ty * tangentialVelocity * 0.15;
-                    }
-                }
+        container.addEventListener('mousedown', (e) => {
+            isPointerDown = true;
+            prevPointerX = e.clientX;
+        });
+        window.addEventListener('mouseup', () => { isPointerDown = false; });
+        window.addEventListener('mousemove', (e) => {
+            if (isPointerDown) {
+                const deltaX = e.clientX - prevPointerX;
+                prevPointerX = e.clientX;
+                manualRotY += deltaX * 0.008;
+                targetTiltY = manualRotY;
             }
+        });
 
-            draw() {
-                ctx.save();
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        // LIGHTING SETUP (Calibrated Studio Setup for Rich Candy Red & Polished Chrome)
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.52);
+        scene.add(ambientLight);
 
-                const gradient = ctx.createRadialGradient(
-                    this.x - this.radius * 0.3,
-                    this.y - this.radius * 0.3,
-                    2,
-                    this.x,
-                    this.y,
-                    this.radius
-                );
-                gradient.addColorStop(0, '#fff');
-                gradient.addColorStop(0.2, this.color);
-                gradient.addColorStop(1, '#d84315');
+        const keyLight = new THREE.DirectionalLight(0xffffff, 1.15);
+        keyLight.position.set(7, 14, 11);
+        keyLight.castShadow = true;
+        keyLight.shadow.mapSize.width = 1024;
+        keyLight.shadow.mapSize.height = 1024;
+        keyLight.shadow.camera.near = 0.5;
+        keyLight.shadow.camera.far = 40;
+        keyLight.shadow.bias = -0.0005;
+        scene.add(keyLight);
 
-                ctx.fillStyle = gradient;
-                ctx.fill();
+        const fillLight = new THREE.DirectionalLight(0xdbeafe, 0.45);
+        fillLight.position.set(-8, -1, 7);
+        scene.add(fillLight);
 
-                ctx.strokeStyle = 'rgba(0,0,0,0.15)';
-                ctx.lineWidth = 1;
-                ctx.stroke();
+        const rimLight = new THREE.PointLight(0xffedd5, 1.1, 40);
+        rimLight.position.set(0, 8, -7);
+        scene.add(rimLight);
 
-                ctx.fillStyle = '#4e342e';
-                ctx.font = 'bold 18px Arial';
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
-                ctx.fillText(this.number, this.x, this.y);
-                ctx.restore();
-            }
+        // Front studio fill light to make chrome faceplate and balls gleam
+        const frontLight = new THREE.DirectionalLight(0xffffff, 0.75);
+        frontLight.position.set(0, 2, 14);
+        scene.add(frontLight);
+
+        // MACHINE HIERARCHY
+        const machineGroup = new THREE.Group();
+        scene.add(machineGroup);
+
+        // AUTO SCALE SYSTEM FOR 3D LUCKY DRAW MACHINE
+        // Automatically calculates optimal scale and vertical alignment so the entire 3D drum
+        // (top chrome finial, glass dome, pedestal base, and shadow) always fits completely
+        // inside .canvas-container on any screen resolution without clipping or overflowing.
+        function autoScaleMachine() {
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            if (!width || !height) return;
+
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+            renderer.setSize(width, height);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            // Frustum dimensions at machine depth (z = 0)
+            const vFovRad = (camera.fov * Math.PI) / 180;
+            const dist = camera.position.z;
+            const visibleHeight = 2 * dist * Math.tan(vFovRad / 2);
+            const visibleWidth = visibleHeight * camera.aspect;
+
+            // Physical bounding dimensions in local group units:
+            // - Top chrome lid dome & finial: +7.30
+            // - Bottom base foot & shadow plane: -3.45
+            // Total height = 10.75, visual center = 1.925
+            // - Flared base foot diameter & shadow width: 8.20
+            const machineHeight = 10.75;
+            const machineWidth = 8.20;
+            const localMidY = 1.925;
+
+            // Safe padding factor: 78% of visible height, 80% of visible width
+            // Leaves generous ~11% top and bottom margins so the top chrome dome
+            // never touches or overflows outside the container, even during mouse tilt!
+            const paddingY = 0.78;
+            const paddingX = 0.80;
+
+            const scaleY = (visibleHeight * paddingY) / machineHeight;
+            const scaleX = (visibleWidth * paddingX) / machineWidth;
+            const scale = Math.min(scaleY, scaleX);
+
+            machineGroup.scale.set(scale, scale, scale);
+
+            // Center machine precisely on camera lookAt target (y = 1.75)
+            const targetCenterY = 1.75;
+            machineGroup.position.set(0, targetCenterY - (localMidY * scale), 0);
         }
 
-        const balls = [];
-        for (let i = 1; i <= 45; i++) {
-            balls.push(new Ball(i));
+        // Attach resize listeners: window resize + ResizeObserver on container
+        window.addEventListener('resize', autoScaleMachine);
+        if (window.ResizeObserver) {
+            const ro = new ResizeObserver(() => {
+                autoScaleMachine();
+            });
+            ro.observe(container);
         }
 
-        function drawCage() {
-            ctx.save();
+        // Initial auto-scale execution
+        autoScaleMachine();
 
-            ctx.beginPath();
-            ctx.arc(centerX, centerY, cageRadius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
-            ctx.fill();
+        // Realistic Materials (Luscious Vintage Candy Red & Polished Mirror Chrome)
+        const redEnamelMaterial = new THREE.MeshStandardMaterial({
+            color: 0xc81822, // Rich deep scarlet / candy red
+            roughness: 0.24,
+            metalness: 0.15
+        });
 
-            ctx.beginPath();
-            ctx.moveTo(centerX - 170, centerY + cageRadius + 30);
-            ctx.lineTo(centerX - 80, centerY);
-            ctx.lineTo(centerX + 80, centerY);
-            ctx.lineTo(centerX + 170, centerY + cageRadius + 30);
-            ctx.strokeStyle = '#8b6f47';
-            ctx.lineWidth = 10;
-            ctx.lineCap = 'round';
-            ctx.stroke();
+        const darkRedMaterial = new THREE.MeshStandardMaterial({
+            color: 0x7f0c13, // Deep wine base ring
+            roughness: 0.38,
+            metalness: 0.12
+        });
 
-            ctx.beginPath();
-            ctx.moveTo(centerX - 220, centerY + cageRadius + 40);
-            ctx.lineTo(centerX + 220, centerY + cageRadius + 40);
-            ctx.strokeStyle = '#5d4037';
-            ctx.lineWidth = 12;
-            ctx.lineCap = 'round';
-            ctx.stroke();
+        const chromeMaterial = new THREE.MeshStandardMaterial({
+            color: 0xf1f5f9,
+            roughness: 0.14,
+            metalness: 0.82
+        });
 
-            ctx.beginPath();
-            ctx.arc(centerX, centerY, 6, 0, Math.PI * 2);
-            ctx.fillStyle = '#5d4037';
-            ctx.fill();
+        const darkChromeMaterial = new THREE.MeshStandardMaterial({
+            color: 0x334155,
+            roughness: 0.28,
+            metalness: 0.75
+        });
 
-            ctx.translate(centerX, centerY);
-            ctx.rotate(cageAngle);
+        // Smoked / Tinted Glass Sphere (richer contrast & realistic glassy volume)
+        const glassMaterial = new THREE.MeshPhysicalMaterial({
+            color: 0x334155, // Smoky slate-tinted glass (darker glass as requested)
+            transparent: true,
+            opacity: 0.52,
+            roughness: 0.05,
+            metalness: 0.1,
+            transmission: 0.72,
+            ior: 1.52,
+            reflectivity: 0.95,
+            clearcoat: 1.0,
+            clearcoatRoughness: 0.03,
+            side: THREE.FrontSide,
+            depthWrite: false
+        });
 
-            ctx.strokeStyle = '#b8860b';
-            ctx.lineWidth = 5;
+        const globeCenterY = 2.4;
+        const globeRadius = 3.25;
 
-            ctx.beginPath();
-            ctx.arc(0, 0, cageRadius, 0, Math.PI * 2);
-            ctx.stroke();
+        // 1. Glossy Pedestal & Body
+        // Base feet ring
+        const baseFootGeo = new THREE.CylinderGeometry(3.5, 3.8, 0.5, 48);
+        const baseFoot = new THREE.Mesh(baseFootGeo, darkRedMaterial);
+        baseFoot.position.y = -3.2;
+        baseFoot.castShadow = true;
+        baseFoot.receiveShadow = true;
+        machineGroup.add(baseFoot);
 
-            const divisions = 14;
-            for (let i = 0; i < divisions; i++) {
-                const angle = (i / divisions) * Math.PI;
-                ctx.beginPath();
-                ctx.moveTo(Math.cos(angle) * cageRadius, Math.sin(angle) * cageRadius);
-                ctx.lineTo(-Math.cos(angle) * cageRadius, -Math.sin(angle) * cageRadius);
-                ctx.strokeStyle = 'rgba(184, 134, 11, 0.65)';
-                ctx.lineWidth = 2;
-                ctx.stroke();
-            }
+        // Base flared skirt
+        const baseSkirtGeo = new THREE.CylinderGeometry(2.8, 3.5, 1.4, 48);
+        const baseSkirt = new THREE.Mesh(baseSkirtGeo, redEnamelMaterial);
+        baseSkirt.position.y = -2.3;
+        baseSkirt.castShadow = true;
+        machineGroup.add(baseSkirt);
 
-            for (let r = 25; r < cageRadius; r += 25) {
-                ctx.beginPath();
-                ctx.arc(0, 0, r, 0, Math.PI * 2);
-                ctx.strokeStyle = 'rgba(184, 134, 11, 0.65)';
-                ctx.lineWidth = 2;
-                ctx.stroke();
-            }
+        // Middle body cylinder
+        const bodyMidGeo = new THREE.CylinderGeometry(2.7, 2.8, 1.8, 48);
+        const bodyMid = new THREE.Mesh(bodyMidGeo, redEnamelMaterial);
+        bodyMid.position.y = -0.7;
+        bodyMid.castShadow = true;
+        machineGroup.add(bodyMid);
 
-            ctx.restore();
-        }
+        // Top collar holding globe
+        const topCollarGeo = new THREE.CylinderGeometry(2.95, 2.7, 0.6, 48);
+        const topCollar = new THREE.Mesh(topCollarGeo, redEnamelMaterial);
+        topCollar.position.y = 0.5;
+        machineGroup.add(topCollar);
 
-        function drawTube() {
-            ctx.save();
-            ctx.beginPath();
-            ctx.moveTo(centerX, centerY + cageRadius - 20);
-            ctx.bezierCurveTo(
-                centerX - 100, centerY + cageRadius + 10,
-                centerX - 200, centerY + cageRadius + 4,
-                centerX - 220, centerY + cageRadius + 30
-            );
-            ctx.strokeStyle = 'rgba(184, 134, 11, 0.85)';
-            ctx.lineWidth = 8;
-            ctx.lineCap = 'round';
-            ctx.stroke();
-            ctx.restore();
-        }
+        // Chrome retaining ring at base of globe
+        const chromeRimGeo = new THREE.TorusGeometry(2.85, 0.16, 20, 48);
+        const chromeRim = new THREE.Mesh(chromeRimGeo, chromeMaterial);
+        chromeRim.rotation.x = Math.PI / 2;
+        chromeRim.position.y = 0.75;
+        machineGroup.add(chromeRim);
 
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Internal metal floor plate inside globe for balls to rest upon
+        const floorPlateGeo = new THREE.CylinderGeometry(2.7, 2.7, 0.12, 48);
+        const floorPlateMat = new THREE.MeshStandardMaterial({
+            color: 0xd4d4d8,
+            roughness: 0.25,
+            metalness: 0.85
+        });
+        const floorPlate = new THREE.Mesh(floorPlateGeo, floorPlateMat);
+        floorPlate.position.y = 0.8;
+        floorPlate.receiveShadow = true;
+        machineGroup.add(floorPlate);
 
-            if (isSpinning) {
-                spinTimeLeft -= 16.7;
-                if (spinTimeLeft <= 0) {
-                    isSpinning = false;
-                    rotationSpeed = 0;
-                    showWinner();
-                } else {
-                    if (spinTimeLeft < 1000) {
-                        rotationSpeed *= 0.95;
-                    }
-                }
-            }
+        // Clean interior: no stray rods or wires
 
-            cageAngle += rotationSpeed;
+        // 2. Front Mechanism (Coin Slot, Rotary Handle, Dispensing Chute)
+        // Chrome Faceplate
+        const plateGeo = new THREE.BoxGeometry(1.6, 2.2, 0.35);
+        const facePlate = new THREE.Mesh(plateGeo, chromeMaterial);
+        facePlate.position.set(0, -1.2, 2.75);
+        facePlate.rotation.x = 0.05;
+        facePlate.castShadow = true;
+        machineGroup.add(facePlate);
 
-            balls.forEach(ball => {
-                ball.update();
-                ball.draw();
+        // Coin slot bezel
+        const slotBezelGeo = new THREE.CylinderGeometry(0.38, 0.38, 0.15, 32);
+        const slotBezel = new THREE.Mesh(slotBezelGeo, darkChromeMaterial);
+        slotBezel.rotation.x = Math.PI / 2;
+        slotBezel.position.set(0, -0.65, 2.95);
+        machineGroup.add(slotBezel);
+
+        // Rotary Turn Handle (Rotates during spin!)
+        const rotaryGroup = new THREE.Group();
+        rotaryGroup.position.set(0, -0.65, 3.05);
+
+        const knobCenterGeo = new THREE.CylinderGeometry(0.24, 0.24, 0.2, 32);
+        const knobCenter = new THREE.Mesh(knobCenterGeo, chromeMaterial);
+        knobCenter.rotation.x = Math.PI / 2;
+        rotaryGroup.add(knobCenter);
+
+        const knobWingGeo = new THREE.BoxGeometry(1.1, 0.2, 0.16);
+        const knobWing = new THREE.Mesh(knobWingGeo, chromeMaterial);
+        knobWing.position.z = 0.1;
+        rotaryGroup.add(knobWing);
+
+        machineGroup.add(rotaryGroup);
+
+        // Dispensing Chute / Trapdoor flap
+        const chuteGeo = new THREE.BoxGeometry(1.1, 0.8, 0.4);
+        const chute = new THREE.Mesh(chuteGeo, darkChromeMaterial);
+        chute.position.set(0, -1.75, 2.8);
+        machineGroup.add(chute);
+
+        const chuteDoorGeo = new THREE.BoxGeometry(0.85, 0.6, 0.08);
+        const chuteDoor = new THREE.Mesh(chuteDoorGeo, chromeMaterial);
+        chuteDoor.position.set(0, -1.75, 3.02);
+        machineGroup.add(chuteDoor);
+
+        // 3. Glass Globe
+        const globeGeo = new THREE.SphereGeometry(globeRadius, 64, 48);
+        const globeMesh = new THREE.Mesh(globeGeo, glassMaterial);
+        globeMesh.position.y = globeCenterY;
+        globeMesh.renderOrder = 10; // CRITICAL: Render glass AFTER balls so balls are crystal clear inside
+        machineGroup.add(globeMesh);
+
+        // Glass highlights handled cleanly via physical specular clearcoat
+
+        // 4. Chrome Top Cap & Finial Dome
+        const lidGroup = new THREE.Group();
+        lidGroup.position.set(0, globeCenterY + globeRadius - 0.2, 0);
+
+        const lidDomeGeo = new THREE.SphereGeometry(1.85, 48, 24, 0, Math.PI * 2, 0, Math.PI * 0.4);
+        const lidDome = new THREE.Mesh(lidDomeGeo, chromeMaterial);
+        lidDome.castShadow = true;
+        lidGroup.add(lidDome);
+
+        const lidLipGeo = new THREE.TorusGeometry(1.82, 0.1, 16, 48);
+        const lidLip = new THREE.Mesh(lidLipGeo, chromeMaterial);
+        lidLip.rotation.x = Math.PI / 2;
+        lidLip.position.y = 0.05;
+        lidGroup.add(lidLip);
+
+        const lidFinialGeo = new THREE.SphereGeometry(0.3, 24, 24);
+        const lidFinial = new THREE.Mesh(lidFinialGeo, chromeMaterial);
+        lidFinial.position.y = 1.05;
+        lidGroup.add(lidFinial);
+
+        machineGroup.add(lidGroup);
+
+        // Shadow Floor Plane
+        const shadowPlaneGeo = new THREE.PlaneGeometry(16, 16);
+        const shadowPlaneMat = new THREE.ShadowMaterial({ opacity: 0.18 });
+        const shadowPlane = new THREE.Mesh(shadowPlaneGeo, shadowPlaneMat);
+        shadowPlane.rotation.x = -Math.PI / 2;
+        shadowPlane.position.y = -3.45;
+        shadowPlane.receiveShadow = true;
+        machineGroup.add(shadowPlane);
+
+        // 5. LUCKY BALLS IN THREE.JS WITH CANVAS TEXTURES
+        const ballRadius = 0.47;
+        const ballPalette = [
+            '#dc2626', // Vivid Red
+            '#2563eb', // Rich Blue
+            '#f59e0b', // Amber Gold
+            '#10b981', // Emerald Green
+            '#ec4899', // Vibrant Pink
+            '#06b6d4', // Cyan
+            '#f97316', // Bright Orange
+            '#8b5cf6', // Purple
+            '#f1f5f9', // Pearl White
+            '#84cc16', // Lime Green
+            '#0ea5e9', // Sky Blue
+            '#e11d48'  // Crimson
+        ];
+
+        // Create canvas texture with number (512x256)
+        // Center front badge at x=128 (u=0.25) facing directly at camera on +Z axis!
+        // Center back badge at x=384 (u=0.75) facing -Z axis.
+        function createBallTexture(number, baseColor) {
+            const canvas2d = document.createElement('canvas');
+            canvas2d.width = 512;
+            canvas2d.height = 256;
+            const ctx2d = canvas2d.getContext('2d');
+
+            // Rich glossy base fill
+            const grad = ctx2d.createLinearGradient(0, 0, 512, 256);
+            grad.addColorStop(0, '#ffffff');
+            grad.addColorStop(0.15, baseColor);
+            grad.addColorStop(0.85, baseColor);
+            grad.addColorStop(1, '#0f172a');
+            ctx2d.fillStyle = grad;
+            ctx2d.fillRect(0, 0, 512, 256);
+
+            // Two circular badges (Front u=0.25 and Back u=0.75)
+            [128, 384].forEach(cx => {
+                // Subtle shadow/glow
+                ctx2d.beginPath();
+                ctx2d.arc(cx, 128, 70, 0, Math.PI * 2);
+                ctx2d.fillStyle = 'rgba(255, 255, 255, 0.35)';
+                ctx2d.fill();
+
+                // Crisp white center badge
+                ctx2d.beginPath();
+                ctx2d.arc(cx, 128, 62, 0, Math.PI * 2);
+                ctx2d.fillStyle = '#ffffff';
+                ctx2d.fill();
+                ctx2d.lineWidth = 6;
+                ctx2d.strokeStyle = baseColor;
+                ctx2d.stroke();
+
+                // Bold high-contrast number
+                ctx2d.fillStyle = '#0f172a';
+                ctx2d.font = '900 66px "Outfit", "Plus Jakarta Sans", system-ui, sans-serif';
+                ctx2d.textAlign = 'center';
+                ctx2d.textBaseline = 'middle';
+                ctx2d.fillText(number.toString(), cx, 131);
             });
 
-            drawCage();
-            drawTube();
-
-            requestAnimationFrame(animate);
+            const tex = new THREE.CanvasTexture(canvas2d);
+            tex.needsUpdate = true;
+            return tex;
         }
 
-        requestAnimationFrame(animate);
+        const ballGeo = new THREE.SphereGeometry(ballRadius, 26, 22);
+        const balls3D = [];
+        const totalBalls = 60;
+
+        for (let i = 1; i <= totalBalls; i++) {
+            const color = ballPalette[(i - 1) % ballPalette.length];
+            const ballMat = new THREE.MeshStandardMaterial({
+                map: createBallTexture(i, color),
+                roughness: 0.2,
+                metalness: 0.1
+            });
+
+            const ballMesh = new THREE.Mesh(ballGeo, ballMat);
+            ballMesh.castShadow = true;
+            ballMesh.renderOrder = 1;
+
+            // Fill lower to mid hemisphere (y between 1.0 and 3.2)
+            const layer = Math.floor((i - 1) / 8);
+            const layerY = 1.0 + layer * 0.29 + (Math.random() - 0.5) * 0.08;
+            const angle = ((i - 1) % 8) * (Math.PI * 2 / 8) + Math.random() * 0.4;
+            const rDist = (0.2 + Math.random() * 0.75) * 2.15;
+
+            ballMesh.position.set(
+                Math.cos(angle) * rDist,
+                layerY,
+                Math.sin(angle) * rDist
+            );
+
+            machineGroup.add(ballMesh);
+
+            balls3D.push({
+                mesh: ballMesh,
+                number: i,
+                color: color,
+                vx: (Math.random() - 0.5) * 0.02,
+                vy: 0,
+                vz: (Math.random() - 0.5) * 0.02,
+                rx: (Math.random() - 0.5) * 0.05,
+                ry: (Math.random() - 0.5) * 0.05
+            });
+        }
+
+        // Dispensed Winning Ball mesh for drop animation
+        let winningBallAnim = null;
+        const winningBallMesh = new THREE.Mesh(ballGeo, new THREE.MeshStandardMaterial({
+            color: 0xffffff,
+            roughness: 0.2,
+            metalness: 0.1
+        }));
+        winningBallMesh.visible = false;
+        winningBallMesh.scale.set(1.4, 1.4, 1.4);
+        machineGroup.add(winningBallMesh);
+
+        // PHYSICS & AGITATION LOOP
+        let isSpinning = false;
+        let spinDuration = 0;
+        let spinTimeLeft = 0;
+        let selectedWinner = null;
+
+        function update3DPhysics() {
+            const floorY = 0.88; // Floor constraint inside visible glass globe
+            const maxR = globeRadius - ballRadius - 0.06;
+            const gravity = -0.016;
+
+            if (isSpinning) {
+                spinTimeLeft -= 16.6;
+                // Rotate coin handle during spin
+                rotaryGroup.rotation.z += 0.25;
+
+                if (spinTimeLeft <= 0) {
+                    isSpinning = false;
+                    triggerWinningBallDrop();
+                }
+            }
+
+            // Agitation power factor (gradually ramps down in the last 0.8s for smooth, realistic settling)
+            let agitationPower = 0;
+            if (isSpinning) {
+                if (spinTimeLeft > 800) {
+                    agitationPower = 1.0;
+                } else {
+                    agitationPower = Math.max(0, spinTimeLeft / 800);
+                }
+            }
+
+            const n = balls3D.length;
+            for (let i = 0; i < n; i++) {
+                const b = balls3D[i];
+
+                if (isSpinning && agitationPower > 0.05) {
+                    // CHAOTIC 3D BOUNCING (NO circular vortex / windmill rotation!):
+                    // 1. Turbulent erratic forces in random 3D directions (X, Y, Z)
+                    b.vx += (Math.random() - 0.5) * 0.09 * agitationPower;
+                    b.vz += (Math.random() - 0.5) * 0.09 * agitationPower;
+
+                    // 2. Air jet upward thrust lifting balls high into the glass globe
+                    b.vy += (Math.random() - 0.28) * 0.085 * agitationPower;
+
+                    // 3. Random tumble rotational velocities
+                    b.rx += (Math.random() - 0.5) * 0.06 * agitationPower;
+                    b.ry += (Math.random() - 0.5) * 0.06 * agitationPower;
+                } else {
+                    // Gradual damping when not spinning or settling down
+                    b.vx *= 0.92;
+                    b.vz *= 0.92;
+                    b.rx *= 0.94;
+                    b.ry *= 0.94;
+                }
+
+                // Gravity pulls down
+                b.vy += gravity;
+
+                // Speed limit (higher during energetic spin, damping down when settling)
+                const speed = Math.sqrt(b.vx * b.vx + b.vy * b.vy + b.vz * b.vz);
+                const maxSpeed = isSpinning ? (0.42 * agitationPower + 0.16) : 0.22;
+                if (speed > maxSpeed && speed > 0.0001) {
+                    b.vx = (b.vx / speed) * maxSpeed;
+                    b.vy = (b.vy / speed) * maxSpeed;
+                    b.vz = (b.vz / speed) * maxSpeed;
+                }
+
+                // Integrate position
+                b.mesh.position.x += b.vx;
+                b.mesh.position.y += b.vy;
+                b.mesh.position.z += b.vz;
+
+                // Integrate rotation
+                b.mesh.rotation.x += b.rx;
+                b.mesh.rotation.y += b.ry;
+
+                // 1. FLOOR COLLISION: Trampoline air-blower blast whenever a ball hits the floor plate
+                if (b.mesh.position.y < floorY) {
+                    b.mesh.position.y = floorY;
+                    if (isSpinning && agitationPower > 0.1) {
+                        // High-energy upward chaotic bounce off the bottom floor plate
+                        b.vy = Math.abs(b.vy) * 0.76 + (0.13 + Math.random() * 0.22) * agitationPower;
+                        b.vx += (Math.random() - 0.5) * 0.20 * agitationPower;
+                        b.vz += (Math.random() - 0.5) * 0.20 * agitationPower;
+                    } else {
+                        // Normal settling bounce & friction
+                        b.vy = Math.max(0, -b.vy * 0.35);
+                        b.vx *= 0.85;
+                        b.vz *= 0.85;
+                    }
+                }
+
+                // 2. GLASS DOME ELASTIC RICOCHET: Reflects off curved glass in all directions
+                const dx = b.mesh.position.x;
+                const dy = b.mesh.position.y - globeCenterY;
+                const dz = b.mesh.position.z;
+                const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+
+                if (dist > maxR && dist > 0.0001) {
+                    const nx = dx / dist;
+                    const ny = dy / dist;
+                    const nz = dz / dist;
+
+                    b.mesh.position.x = nx * maxR;
+                    b.mesh.position.y = globeCenterY + ny * maxR;
+                    b.mesh.position.z = nz * maxR;
+
+                    // Elastic reflection across spherical normal
+                    const dot = b.vx * nx + b.vy * ny + b.vz * nz;
+                    if (dot > 0) {
+                        const restitution = (isSpinning && agitationPower > 0.1) ? 0.90 : 0.45;
+                        b.vx -= (1 + restitution) * dot * nx;
+                        b.vy -= (1 + restitution) * dot * ny;
+                        b.vz -= (1 + restitution) * dot * nz;
+
+                        // Deflective random scatter so balls never get stuck in repetitive paths
+                        if (isSpinning && agitationPower > 0.1) {
+                            b.vx += (Math.random() - 0.5) * 0.07 * agitationPower;
+                            b.vy += (Math.random() - 0.5) * 0.07 * agitationPower;
+                            b.vz += (Math.random() - 0.5) * 0.07 * agitationPower;
+                        }
+                    }
+
+                    if (b.mesh.position.y < floorY) {
+                        b.mesh.position.y = floorY;
+                    }
+                }
+
+                // 3. BALL-TO-BALL ELASTIC COLLISIONS: Momentum exchange between colliding balls
+                for (let j = i + 1; j < n; j++) {
+                    const b2 = balls3D[j];
+                    const sx = b2.mesh.position.x - b.mesh.position.x;
+                    const sy = b2.mesh.position.y - b.mesh.position.y;
+                    const sz = b2.mesh.position.z - b.mesh.position.z;
+                    const distSq = sx * sx + sy * sy + sz * sz;
+                    const minDist = ballRadius * 2.0;
+
+                    if (distSq < minDist * minDist && distSq > 0.00001) {
+                        const d = Math.sqrt(distSq);
+                        const nx = sx / d;
+                        const ny = sy / d;
+                        const nz = sz / d;
+
+                        // Positional separation to prevent interpenetration
+                        const overlap = (minDist - d) * 0.5;
+                        b.mesh.position.x -= nx * overlap;
+                        b.mesh.position.y -= ny * overlap;
+                        b.mesh.position.z -= nz * overlap;
+                        b2.mesh.position.x += nx * overlap;
+                        b2.mesh.position.y += ny * overlap;
+                        b2.mesh.position.z += nz * overlap;
+
+                        // Relative velocity along collision line
+                        const rvx = b.vx - b2.vx;
+                        const rvy = b.vy - b2.vy;
+                        const rvz = b.vz - b2.vz;
+                        const velAlongNormal = rvx * nx + rvy * ny + rvz * nz;
+
+                        // Only apply impulse if moving towards each other
+                        if (velAlongNormal > 0) {
+                            const e = (isSpinning && agitationPower > 0.1) ? 0.86 : 0.35;
+                            const impulse = (1 + e) * velAlongNormal * 0.5;
+
+                            b.vx -= impulse * nx;
+                            b.vy -= impulse * ny;
+                            b.vz -= impulse * nz;
+                            b2.vx += impulse * nx;
+                            b2.vy += impulse * ny;
+                            b2.vz += impulse * nz;
+
+                            // Add random deflective spin to both balls on collision
+                            if (isSpinning) {
+                                b.rx += (Math.random() - 0.5) * 0.05;
+                                b.ry += (Math.random() - 0.5) * 0.05;
+                                b2.rx += (Math.random() - 0.5) * 0.05;
+                                b2.ry += (Math.random() - 0.5) * 0.05;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Winning ball dispensing animation with showcase of winning number before modal
+            if (winningBallAnim) {
+                winningBallAnim.frame++;
+                const frame = winningBallAnim.frame;
+
+                // Phase 1: Ball drops through chute tube (frames 1 to 35, ~0.6s)
+                if (frame <= 35) {
+                    const p = frame / 35;
+                    // Chute flap opens
+                    chuteDoor.rotation.x = -Math.sin(p * Math.PI) * 0.65;
+                    winningBallMesh.position.set(
+                        0,
+                        THREE.MathUtils.lerp(0.8, -1.75, p),
+                        THREE.MathUtils.lerp(1.5, 2.95, p)
+                    );
+                    winningBallMesh.rotation.x += 0.15;
+                    winningBallMesh.scale.setScalar(1.4);
+                }
+                // Phase 2: Ball rolls out and glides to center front towards camera (frames 36 to 95, ~1.0s)
+                else if (frame <= 95) {
+                    chuteDoor.rotation.x = 0;
+                    const p = (frame - 35) / 60;
+                    const ease = Math.sin((p * Math.PI) / 2);
+
+                    winningBallMesh.position.set(
+                        0,
+                        THREE.MathUtils.lerp(-1.75, 0.3, ease),
+                        THREE.MathUtils.lerp(2.95, 8.4, ease)
+                    );
+                    winningBallMesh.scale.setScalar(THREE.MathUtils.lerp(1.4, 2.8, ease));
+
+                    // CRITICAL: Interpolate rotation to (0, 0, 0) so the number badge faces straight at camera!
+                    winningBallMesh.rotation.x = THREE.MathUtils.lerp(winningBallMesh.rotation.x, 0, 0.14);
+                    winningBallMesh.rotation.y = THREE.MathUtils.lerp(winningBallMesh.rotation.y, 0, 0.14);
+                    winningBallMesh.rotation.z = THREE.MathUtils.lerp(winningBallMesh.rotation.z, 0, 0.14);
+                }
+                // Phase 3: SHOWCASE HOLD (frames 96 to 215, ~2.0 seconds)
+                // Ball pauses prominently in front of the camera with the winning number perfectly visible!
+                else if (frame <= 215) {
+                    winningBallMesh.position.set(0, 0.3 + Math.sin(frame * 0.08) * 0.04, 8.4);
+                    winningBallMesh.rotation.set(0, 0, 0); // Lock front face directly to camera
+                    winningBallMesh.scale.setScalar(2.8 + Math.sin(frame * 0.08) * 0.03); // Subtle celebratory pulse
+                }
+                // Phase 4: Only after showing the winning number on the ball, open the celebration modal!
+                else {
+                    winningBallAnim = null;
+                    showWinner();
+                }
+            }
+        }
+
+        function triggerWinningBallDrop() {
+            // Assign winning ball texture matching winner STT or participant index
+            let displayNum = 1;
+            if (selectedWinner && selectedWinner.stt) {
+                displayNum = parseInt(selectedWinner.stt, 10) || 1;
+            } else if (selectedWinner) {
+                const idx = participants.indexOf(selectedWinner);
+                displayNum = idx >= 0 ? (idx + 1) : Math.floor(Math.random() * totalBalls) + 1;
+            } else {
+                displayNum = Math.floor(Math.random() * totalBalls) + 1;
+            }
+
+            const winColor = ballPalette[(displayNum - 1) % ballPalette.length];
+            winningBallMesh.material.map = createBallTexture(displayNum, winColor);
+            winningBallMesh.material.needsUpdate = true;
+            winningBallMesh.visible = true;
+            winningBallMesh.position.set(0, 0.8, 1.5);
+            winningBallMesh.rotation.set(0.3, 0.1, 0);
+            winningBallMesh.scale.setScalar(1.4);
+
+            winningBallAnim = { frame: 0, displayNum: displayNum };
+        }
+
+        // MAIN 3D ANIMATION LOOP
+        function animate3D() {
+            requestAnimationFrame(animate3D);
+
+            // Smooth parallax lerp
+            machineGroup.rotation.y = THREE.MathUtils.lerp(machineGroup.rotation.y, targetTiltY, 0.06);
+            machineGroup.rotation.x = THREE.MathUtils.lerp(machineGroup.rotation.x, targetTiltX, 0.06);
+
+            update3DPhysics();
+            renderer.render(scene, camera);
+        }
+
+        animate3D();
 
         const spinBtn = document.getElementById('spinBtn');
         spinBtn.addEventListener('click', () => {
@@ -1689,14 +3288,24 @@
             selectedWinner = participants[randomIndex];
 
             isSpinning = true;
-            spinDuration = 5500 + Math.random() * 2000;
+            spinDuration = 4500; // 4.5s exciting spin
             spinTimeLeft = spinDuration;
-            rotationSpeed = 0.25 + Math.random() * 0.15;
 
-            balls.forEach(ball => {
-                ball.vx = (Math.random() - 0.5) * 35;
-                ball.vy = (Math.random() - 0.5) * 35;
-            });
+            // Explosive chaotic blast: scatter all balls chaotically in 3D upwards & in all directions!
+            for (let i = 0; i < balls3D.length; i++) {
+                const b = balls3D[i];
+                b.vx = (Math.random() - 0.5) * 0.38;
+                b.vy = 0.22 + Math.random() * 0.35; // shoot upward into the glass dome!
+                b.vz = (Math.random() - 0.5) * 0.38;
+                b.rx = (Math.random() - 0.5) * 0.15;
+                b.ry = (Math.random() - 0.5) * 0.15;
+            }
+
+            spinBtn.disabled = true;
+            spinBtn.style.opacity = '0.6';
+            spinBtn.innerHTML = '<i class="fas fa-sync-alt fa-spin"></i> Đang quay số...';
+
+            // Also trigger sound or tactile pulse if needed
         });
 
         // SHOW WINNER MODAL & CONFETTI
@@ -1711,11 +3320,18 @@
 
             winnerNameSpan.textContent = winner.name.toUpperCase();
             winnerPhoneSpan.textContent = winner.phone ? `Số điện thoại: ${maskPhone(winner.phone)}` : '';
+            const ribbon = document.querySelector('.modal-ribbon');
+            if (ribbon && winner.stt) {
+                ribbon.innerHTML = `🎉 SỐ MAY MẮN: #${winner.stt} 🎉`;
+            }
 
             winners.push(winner);
             localStorage.setItem('lottery_winners', JSON.stringify(winners));
 
             participants = participants.filter(p => cleanPhone(p.phone) !== cleanPhone(winner.phone));
+
+            // Auto-navigate to page containing the newly announced winner
+            currentWinnersPage = Math.ceil(winners.length / WINNERS_PER_PAGE);
 
             updateTable();
             updateWinnersUI();
@@ -1723,11 +3339,17 @@
             selectedWinner = null;
             modalOverlay.classList.add('active');
             startConfetti();
+
+            // Re-enable spin button
+            spinBtn.disabled = false;
+            spinBtn.style.opacity = '1';
+            spinBtn.innerHTML = '<i class="fas fa-play"></i> Bắt đầu quay số';
         }
 
         function closeModal() {
             modalOverlay.classList.remove('active');
             stopConfetti();
+            winningBallMesh.visible = false;
         }
 
         // CONFETTI SYSTEM
@@ -1802,6 +3424,214 @@
             confettiActive = false;
             confCtx.clearRect(0, 0, confCanvas.width, confCanvas.height);
         }
+
+        // ==============================================================
+        // THEME SWITCHER (Sáng Công Nghệ <-> Uniswap Pastel Air)
+        // Two distinct, ultra-modern light aesthetics per DESIGN.md!
+        // ==============================================================
+        function toggleTheme() {
+            const isUniswap = document.body.classList.toggle('theme-uniswap');
+            // Remove legacy dark class if present
+            document.body.classList.remove('theme-oryzo');
+            localStorage.setItem('vong_quay_theme', isUniswap ? 'uniswap' : 'light');
+            updateThemeToggleUI();
+        }
+
+        function updateThemeToggleUI() {
+            const isUniswap = document.body.classList.contains('theme-uniswap') || document.body.classList.contains('theme-oryzo');
+            const btn = document.getElementById('themeToggleBtn');
+            if (btn) {
+                btn.innerHTML = isUniswap
+                    ? `<span class="theme-icon">⚡</span><span class="theme-label">Sáng Công Nghệ</span>`
+                    : `<span class="theme-icon">🦄</span><span class="theme-label">Uniswap Pastel</span>`;
+                btn.title = isUniswap 
+                    ? "Chuyển sang: Sáng Công Nghệ (Civic Tech Blue)" 
+                    : "Chuyển sang: Uniswap Pastel Air (DESIGN.md)";
+            }
+        }
+
+        // ==========================================
+        // BACKGROUND TOGGLE (Nền Trắng <-> Hình Ảnh Sự Kiện)
+        // ==========================================
+        // =========================================================================
+        // CUSTOM USER BACKGROUND UPLOAD, PERSISTENCE & OVERLAY CUSTOMIZATION
+        // =========================================================================
+        function handleUserBgUpload(event) {
+            const file = event.target.files && event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const rawDataUrl = e.target.result;
+
+                // Downscale image to max 1920x1080 to ensure optimal performance & fit in localStorage
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    let width = img.width;
+                    let height = img.height;
+                    const maxW = 1920;
+                    const maxH = 1080;
+
+                    if (width > maxW || height > maxH) {
+                        if (width / height > maxW / maxH) {
+                            height = Math.round((height * maxW) / width);
+                            width = maxW;
+                        } else {
+                            width = Math.round((width * maxH) / height);
+                            height = maxH;
+                        }
+                    }
+
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+
+                    const optimizedDataUrl = canvas.toDataURL('image/jpeg', 0.88);
+
+                    try {
+                        localStorage.setItem('vong_quay_user_custom_bg_data', optimizedDataUrl);
+                    } catch(err) {
+                        console.warn("Storage quota exceeded, using in-memory background");
+                    }
+
+                    applyCustomBgImage(optimizedDataUrl);
+
+                    // Ensure custom background mode is activated when user uploads an image
+                    if (!document.body.classList.contains('bg-image-active')) {
+                        document.body.classList.add('bg-image-active');
+                    }
+                    localStorage.setItem('vong_quay_custom_bg', 'image');
+                    updateBgToggleUI();
+                    showToast("Đã tải và áp dụng hình nền thành công!", "success");
+                };
+                img.src = rawDataUrl;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function applyCustomBgImage(url) {
+            document.body.style.setProperty('--custom-bg-url', `url("${url}")`);
+            document.body.style.backgroundImage = '';
+
+            const preview = document.getElementById('currentBgPreview');
+            if (preview) {
+                preview.style.backgroundImage = `url("${url}")`;
+                preview.style.backgroundColor = '';
+                preview.innerHTML = '';
+            }
+        }
+
+        function resetToDefaultBg() {
+            localStorage.removeItem('vong_quay_user_custom_bg_data');
+            localStorage.setItem('vong_quay_custom_bg', 'white');
+            document.body.style.removeProperty('--custom-bg-url');
+            document.body.style.backgroundImage = '';
+            document.body.classList.remove('bg-image-active');
+
+            const preview = document.getElementById('currentBgPreview');
+            if (preview) {
+                preview.style.backgroundImage = 'none';
+                preview.style.backgroundColor = '#f8fafc';
+                preview.innerHTML = '<span style="font-size: 0.8rem; color: #94a3b8; font-weight: 500;">⚪ Đang dùng nền trắng mặc định</span>';
+            }
+
+            updateBgToggleUI();
+            showToast("Đã chuyển về nền trắng mặc định", "info");
+        }
+
+        function adjustScrimOpacity(val) {
+            const opacity = val / 100;
+            const scrim = document.querySelector('.bg-overlay-scrim');
+            const valSpan = document.getElementById('scrimOpacityVal');
+            if (valSpan) valSpan.textContent = val + '%';
+            if (scrim) {
+                scrim.style.background = `linear-gradient(180deg, rgba(255, 255, 255, ${opacity * 0.75}) 0%, rgba(240, 246, 255, ${opacity}) 50%, rgba(224, 236, 255, ${Math.min(0.9, opacity * 1.15)}) 100%)`;
+            }
+            localStorage.setItem('vong_quay_scrim_opacity', val);
+        }
+
+        function toggleCustomBg() {
+            const userBg = localStorage.getItem('vong_quay_user_custom_bg_data');
+            // If no custom background has been uploaded yet and user clicks, trigger file upload dialog!
+            if (!userBg && !document.body.classList.contains('bg-image-active')) {
+                const fileInput = document.getElementById('bgFileInput');
+                if (fileInput) fileInput.click();
+                return;
+            }
+
+            const isBgActive = document.body.classList.toggle('bg-image-active');
+            localStorage.setItem('vong_quay_custom_bg', isBgActive ? 'image' : 'white');
+            document.body.style.backgroundImage = '';
+            updateBgToggleUI();
+        }
+
+        function updateBgToggleUI() {
+            const isBgActive = document.body.classList.contains('bg-image-active');
+            const btn = document.getElementById('bgToggleBtn');
+            const userBg = localStorage.getItem('vong_quay_user_custom_bg_data');
+            if (btn) {
+                if (isBgActive) {
+                    btn.classList.add('active');
+                    btn.innerHTML = `<span class="bg-icon">🖼️</span><span class="bg-label">Nền: Hình ảnh</span>`;
+                    btn.title = "Đang hiển thị hình nền đã tải (Bấm để chuyển về nền trắng)";
+                } else {
+                    btn.classList.remove('active');
+                    btn.innerHTML = `<span class="bg-icon">⚪</span><span class="bg-label">Nền: Trắng</span>`;
+                    btn.title = userBg 
+                        ? "Đang hiển thị nền trắng (Bấm để bật lại hình nền đã tải)" 
+                        : "Đang hiển thị nền trắng mặc định (Bấm để chọn và tải ảnh nền mới)";
+                }
+            }
+        }
+
+        // Initialize Background & User Upload from localStorage on load
+        (function initCustomBg() {
+            document.body.style.backgroundImage = '';
+
+            const userBg = localStorage.getItem('vong_quay_user_custom_bg_data');
+            const savedBg = localStorage.getItem('vong_quay_custom_bg');
+
+            if (userBg && savedBg === 'image') {
+                applyCustomBgImage(userBg);
+                document.body.classList.add('bg-image-active');
+            } else if (userBg) {
+                applyCustomBgImage(userBg);
+                document.body.classList.remove('bg-image-active');
+            } else {
+                // DEFAULT IS CLEAN WHITE BACKGROUND! Only changes when user uploads an image!
+                document.body.style.removeProperty('--custom-bg-url');
+                document.body.style.backgroundImage = '';
+                document.body.classList.remove('bg-image-active');
+                localStorage.setItem('vong_quay_custom_bg', 'white');
+                const preview = document.getElementById('currentBgPreview');
+                if (preview) {
+                    preview.style.backgroundImage = 'none';
+                    preview.style.backgroundColor = '#f8fafc';
+                    preview.innerHTML = '<span style="font-size: 0.8rem; color: #94a3b8; font-weight: 500;">⚪ Đang dùng nền trắng mặc định</span>';
+                }
+            }
+
+            const savedScrim = localStorage.getItem('vong_quay_scrim_opacity');
+            if (savedScrim) {
+                const range = document.getElementById('scrimOpacityRange');
+                if (range) range.value = savedScrim;
+                adjustScrimOpacity(savedScrim);
+            }
+
+            updateBgToggleUI();
+        })();
+
+        // Initialize Theme from localStorage on load
+        (function initTheme() {
+            const savedTheme = localStorage.getItem('vong_quay_theme');
+            // If user previously had 'oryzo' or 'uniswap', automatically upgrade to bright 'uniswap'
+            if (savedTheme === 'uniswap' || savedTheme === 'oryzo') {
+                document.body.classList.add('theme-uniswap');
+            }
+            updateThemeToggleUI();
+        })();
     </script>
 </body>
 
